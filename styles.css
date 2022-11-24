@@ -1,0 +1,25 @@
+/* styles.css */
+
+* {
+  border: 2px solid red;
+}
+
+.total {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 10%;
+    display: flex;
+}
+
+.navbar div {
+    flex: 1 1 auto;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
