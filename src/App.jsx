@@ -4,6 +4,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Books from './components/Books';
 import Offerings from './components/Offerings';
+import Media from './components/Media';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Offerings />
       <div className="mt-40"></div>
       <Books />
+      <div className="mt-40"></div>
+      <Media />
       <div className="mt-40"></div>
       <Contact />
     </>
