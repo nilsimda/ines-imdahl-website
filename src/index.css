@@ -1,0 +1,21 @@
+@tailwind base;
+
+@layer base {
+  html {
+    @apply font-serif;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'International';
+  src: url('fonts/International.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
