@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import axios from 'axios';
+import { supabase } from '../utils/supaBaseClient';
 
 function Media() {
     const [selectedItem, setSelectedItem] = useState(null);
@@ -11,16 +11,14 @@ function Media() {
 
     useEffect(() => {
         const fetchMediaAppearances = async () => {
-            try {
-                setIsLoading(true);
-                const response = await axios.get('/api/media-appearances');
-                setMediaAppearances(response.data);
-            } catch (err) {
-                setError('Failed to load media appearances');
-                console.error('Error fetching media appearances:', err);
-            } finally {
-                setIsLoading(false);
+            setIsLoading(true);
+            const { data, error } = await supabase.from('medien').select();
+            if (error) {
+                console.error(error);
+                setError(error);
             }
+            else setMediaAppearances(data);
+            setIsLoading(false);
         };
 
         fetchMediaAppearances();
@@ -35,11 +33,11 @@ function Media() {
     };
 
     if (isLoading) {
-        return <div className="text-center py-16">Loading...</div>;
+        return <div className="text-center py-16">Lädt...</div>;
     }
 
     if (error) {
-        return <div className="text-center py-16 text-red-600">{error}</div>;
+        return <div className="text-center py-16 text-red-600">{error.error}</div>;
     }
 
     return (
@@ -103,14 +101,6 @@ function Media() {
                             <p className="text-gray-700 mb-4">{selectedItem.description}</p>
                             <div className="flex justify-between items-center">
                                 <span className="text-gray-600">{selectedItem.date}</span>
-                                <a
-                                    href={selectedItem.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                                >
-                                    Mehr erfahren
-                                </a>
                             </div>
                         </motion.div>
                     </motion.div>

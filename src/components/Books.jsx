@@ -28,8 +28,8 @@ function Books() {
                 <h1 className="text-4xl font-bold text-center mb-12">Meine Bücher</h1>
 
                 <div className="grid md:grid-cols-2 gap-44">
-                    {books.map((book, _) => (
-                        <div className="flex flex-col items-center h-full">
+                    {books.map((book, index) => (
+                        <div key={index} className="flex flex-col items-center h-full">
                             <div className="relative w-full max-w-xs aspect-[2/3] mb-6">
                                 <img
                                     src={book.coverImage}
