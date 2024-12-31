@@ -6,12 +6,13 @@ import Contact from './components/Contact';
 import Books from './components/Books';
 import Offerings from './components/Offerings';
 import Media from './components/Media';
-import OwnerLogin from './components/OwnerLogin';
+import SecretLogin from './components/SecretLogin';
+import SecretDashboard from './components/SecretDashboard';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
     <Routes>
-      <Route path="/secret-login" element={<OwnerLogin />} />
       <Route path="/" element={
         <>
           <LandingPage />
@@ -26,6 +27,12 @@ function App() {
           <div className="mt-40"></div>
           <Contact />
         </>
+      } />
+      <Route path="/secret-login" element={<SecretLogin />} />
+      <Route path="/secret-dashboard" element={
+        <ProtectedRoute>
+          <SecretDashboard />
+        </ProtectedRoute>
       } />
     </Routes>
   );

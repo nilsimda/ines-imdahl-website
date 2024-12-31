@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../utils/supaBaseClient';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeMinimal } from '@supabase/auth-ui-shared';
+import { Navigate } from 'react-router-dom';
 
-function OwnerLogin() {
+function SecretLogin() {
     const [session, setSession] = useState(null)
 
     useEffect(() => {
@@ -24,8 +25,8 @@ function OwnerLogin() {
         return (<Auth supabaseClient={supabase} appearance={{ theme: ThemeMinimal }} />)
     }
     else {
-        return (<div>Logged in!</div>)
+        return <Navigate to="/secret-dashboard" replace />
     }
 }
 
-export default OwnerLogin;
+export default SecretLogin;
