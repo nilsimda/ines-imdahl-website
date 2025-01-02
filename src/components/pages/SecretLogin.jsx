@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../utils/supaBaseClient';
+import { supabase } from '../../utils/supaBaseClient';
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeMinimal } from '@supabase/auth-ui-shared';
 import { Navigate } from 'react-router-dom';

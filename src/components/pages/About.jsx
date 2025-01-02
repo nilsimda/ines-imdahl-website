@@ -1,5 +1,5 @@
-import imageOne from '../assets/image1.jpg';
-import imageTwo from '../assets/image2.jpg';
+import imageOne from '../../assets/image1.jpg';
+import imageTwo from '../../assets/image2.jpg';
 
 function About() {
     return (

@@ -1,9 +1,9 @@
-import BackgroundImage from './BackgroundImage';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import imageUrl from '../assets/pink.jpg';
-import logoImage from '../assets/name.png';
+import BackgroundImage from '../ui/BackgroundImage';
+import Header from '../ui/Header';
+import Sidebar from '../ui/Sidebar';
+import Footer from '../ui/Footer';
+import imageUrl from '../../assets/pink.jpg';
+import logoImage from '../../assets/name.png';
 
 function LandingPage({ }) {
     return (

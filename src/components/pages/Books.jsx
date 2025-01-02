@@ -1,6 +1,6 @@
 import { FaShoppingCart } from "react-icons/fa";
-import book1Cover from "../assets/werbung_couch.jpg";
-import book2Cover from "../assets/frauen_buch.jpg";
+import book1Cover from "../../assets/werbung_couch.jpg";
+import book2Cover from "../../assets/frauen_buch.jpg";
 
 function Books() {
     const books = [

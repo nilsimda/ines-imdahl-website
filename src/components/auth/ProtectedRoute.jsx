@@ -1,7 +1,7 @@
 // components/ProtectedRoute.jsx
 import { Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { supabase } from '../utils/supaBaseClient';
+import { supabase } from '../../utils/supaBaseClient';
 
 const ProtectedRoute = ({ children }) => {
     const [session, setSession] = useState(null);

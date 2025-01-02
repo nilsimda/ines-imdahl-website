@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { scrollToSection } from '../utils/scrollToSection';
+import { scrollToSection } from '../../utils/scrollToSection';
 
 function Sidebar() {
-    const [isCollapsed, setIsCollapsed] = useState(false);
     const handleLinkClick = (event, sectionId) => {
         event.preventDefault();
         scrollToSection(sectionId);
@@ -23,13 +22,13 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#bücher" onClick={event => handleLinkClick(event, "books")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                            Bücher
+                        <a href="#blog" onClick={event => handleLinkClick(event, "blog")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
+                            Blog
                         </a>
                     </li>
                     <li>
-                        <a href="#blog" onClick={event => handleLinkClick(event, "blog")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                            Blog
+                        <a href="#bücher" onClick={event => handleLinkClick(event, "books")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
+                            Bücher
                         </a>
                     </li>
                     <li>

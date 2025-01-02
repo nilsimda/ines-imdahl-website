@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import { supabase } from '../utils/supaBaseClient';
+import { supabase } from '../../utils/supaBaseClient';
 
-function Media() {
+function MediaAppearances() {
     const [selectedItem, setSelectedItem] = useState(null);
     const [mediaAppearances, setMediaAppearances] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -12,7 +12,7 @@ function Media() {
     useEffect(() => {
         const fetchMediaAppearances = async () => {
             setIsLoading(true);
-            const { data, error } = await supabase.from('medien').select();
+            const { data, error } = await supabase.from('content').select().eq('contentType', 'media_appearance');
             if (error) {
                 console.error(error);
                 setError(error);
@@ -110,4 +110,4 @@ function Media() {
     );
 }
 
-export default Media;
+export default MediaAppearances;
