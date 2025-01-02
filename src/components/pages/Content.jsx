@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../utils/supaBaseClient';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
+//TODO: fix heights accross pages
+
 function Content({ contentType }) {
     const [blogs, setBlogs] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -60,7 +62,7 @@ function Content({ contentType }) {
 
     return (
         <section id="blog" className="py-16 px-4">
-            <h1 className="text-4xl font-bold text-center mb-16">
+            <h1 className="text-4xl font-bold text-center mb-8">
                 {contentType === 'blog' ? 'Blog' : 'In den Medien'}
             </h1>
 
