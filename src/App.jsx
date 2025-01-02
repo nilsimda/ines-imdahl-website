@@ -9,6 +9,7 @@ import Offerings from './components/pages/Offerings';
 import SecretLogin from './components/pages/SecretLogin';
 import SecretDashboard from './components/pages/SecretDashboard';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+import ContentDetail from './components/pages/ContentDetail';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Contact />
         </>
       } />
+      <Route path="/content/:id" element={<ContentDetail />} />
       <Route path="/secret-login" element={<SecretLogin />} />
       <Route path="/secret-dashboard" element={
         <ProtectedRoute>

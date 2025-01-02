@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '../../utils/supaBaseClient';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 //TODO: fix heights accross pages
 
@@ -11,6 +12,7 @@ function Content({ contentType }) {
     const [currentPage, setCurrentPage] = useState(1);
     const [isChangingPage, setIsChangingPage] = useState(false);
     const postsPerPage = 3;
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchBlogs();
@@ -56,6 +58,11 @@ function Content({ contentType }) {
         }, 300);
     };
 
+    const handleCardClick = (blog) => {
+        navigate(`/content/${blog.id}`);
+    };
+
+
     if (loading) {
         return <div className="text-center py-16">Lädt...</div>;
     }
@@ -93,6 +100,7 @@ function Content({ contentType }) {
                             {currentPosts.map((blog) => (
                                 <div
                                     key={blog.id}
+                                    onClick={() => handleCardClick(blog)}
                                     className={`w-full md:w-[calc(33.333%-1rem)] min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg flex-shrink-0 hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col transform ${isChangingPage ? 'translate-y-4' : 'translate-y-0'
                                         }`}
                                 >
