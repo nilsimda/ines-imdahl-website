@@ -11,8 +11,24 @@ function Content({ contentType }) {
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
     const [isChangingPage, setIsChangingPage] = useState(false);
-    const postsPerPage = 3;
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const navigate = useNavigate();
+
+    const getPostsPerPage = () => {
+        if (windowWidth < 768) return 1;      // Mobile
+        return 3;
+    };
+
+    const postsPerPage = getPostsPerPage();
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         fetchBlogs();
@@ -60,6 +76,41 @@ function Content({ contentType }) {
 
     const handleCardClick = (blog) => {
         navigate(`/content/${blog.id}`);
+    };
+
+    const getPageNumbers = () => {
+        if (totalPages <= 7) {
+            // If 7 or fewer pages, display all
+            return [...Array(totalPages)].map((_, i) => i + 1);
+        }
+
+        // If more than 7 pages, use an ellipsis
+        const pages = [];
+        if (currentPage <= 4) {
+            // If near the beginning, show first 5, then ellipsis, then last
+            for (let i = 1; i <= 5; i++) {
+                pages.push(i);
+            }
+            pages.push('...');
+            pages.push(totalPages);
+        } else if (currentPage >= totalPages - 3) {
+            // If near the end, show first, then ellipsis, then last 5
+            pages.push(1);
+            pages.push('...');
+            for (let i = totalPages - 4; i <= totalPages; i++) {
+                pages.push(i);
+            }
+        } else {
+            // If in the middle, show first, ellipsis, current - 1, current, current + 1, ellipsis, last
+            pages.push(1);
+            pages.push('...');
+            pages.push(currentPage - 1);
+            pages.push(currentPage);
+            pages.push(currentPage + 1);
+            pages.push('...');
+            pages.push(totalPages);
+        }
+        return pages;
     };
 
 
@@ -139,16 +190,17 @@ function Content({ contentType }) {
                             <FaChevronLeft className="text-gray-600" />
                         </button>
 
-                        {[...Array(totalPages)].map((_, index) => (
+                        {getPageNumbers().map((pageNumber, index) => (
                             <button
-                                key={index + 1}
-                                onClick={() => paginate(index + 1)}
+                                key={index}
+                                onClick={() => pageNumber !== '...' && paginate(pageNumber)}
+                                disabled={pageNumber === '...'}
                                 className={`w-8 h-8 rounded-lg transition-all duration-300 ${currentPage === index + 1
                                     ? 'bg-gray-900 text-white'
                                     : 'hover:bg-gray-100'
                                     }`}
                             >
-                                {index + 1}
+                                {pageNumber}
                             </button>
                         ))}
 
@@ -162,7 +214,7 @@ function Content({ contentType }) {
                     </div>
                 )}
             </div>
-        </section>
+        </section >
     );
 }
 

@@ -4,7 +4,7 @@ import imageTwo from '../../assets/image2.jpg';
 function About() {
     return (
         <section id="about" >
-            <div className="grid grid-cols-3 gap-x-4 gap-y-44 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-10 md:gap-y-44 items-center">
                 <div className="w-full">
                     <img
                         src={imageOne}
@@ -12,7 +12,7 @@ function About() {
                         className="w-full h-auto shadow-lg"
                     />
                 </div>
-                <div className="space-y-4 col-span-2 pr-44">
+                <div className="space-y-4 md:col-span-2 md:pr-44">
                     <h3 className="text-xl font-bold">Über mich</h3>
                     <p className="text-gray-600">
                         Mein Name ist Ines Imdahl, ich bin Diplom-Psychologin mit einem besonderen Schwerpunkt Tiefenpsychologie. Genau: der morphologischen Psychologie. Schon immer hat mich interessiert, warum die Menschen tun, was sie tun & warum sie sich mit vernünftigen Argumenten selten überzeugen lassen. Sie rauchen, obwohl sie voll aufgeklärt sind über die gesundheitsschädlichen folgen. Sie essen Billigfleisch, obwohl sie gegen Massentierhaltung sind.
@@ -30,7 +30,14 @@ function About() {
                         Meine 4 Kinder fordern mich dabei immer wieder heraus – und helfen mir neugierig und offen für alle Fragestellungen zu bleiben.
                     </p>
                 </div>
-                <div className="space-y-4 relative px-6 col-span-2 pl-44">
+                <div className="w-full md:col-span-full order-last md:order-none">
+                    <img
+                        src={imageTwo}
+                        alt="About me"
+                        className="w-full h-auto shadow-lg"
+                    />
+                </div>
+                <div className="space-y-4 pl-4 md:col-span-2 md:pl-44">
                     <h3 className="text-xl font-semibold mb-6">Einige besondere Highlights in meinem Leben:</h3>
                     <div className="border-l-2 border-gray-300 pl-8 space-y-6">
                         <div className="relative">
@@ -63,13 +70,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full">
-                    <img
-                        src={imageTwo}
-                        alt="About me"
-                        className="w-full h-auto shadow-lg"
-                    />
-                </div>
+
             </div>
         </section>
     );
