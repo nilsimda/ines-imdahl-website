@@ -30,7 +30,7 @@ function About() {
                         Meine 4 Kinder fordern mich dabei immer wieder heraus – und helfen mir neugierig und offen für alle Fragestellungen zu bleiben.
                     </p>
                 </div>
-                <div className="w-full md:col-span-full order-last md:order-none">
+                <div className="w-full order-none md:order-last">
                     <img
                         src={imageTwo}
                         alt="About me"
