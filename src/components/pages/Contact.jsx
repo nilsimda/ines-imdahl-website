@@ -2,7 +2,7 @@
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 function Contact() {
     return (
-        <section id="contact" className="flex flex-col items-center justify-center py-16 px-4">
+        <section id="contact" className="flex flex-col items-center justify-center pb-8">
             <h1 className="text-4xl font-bold mb-8">Kontakt</h1>
 
             <a

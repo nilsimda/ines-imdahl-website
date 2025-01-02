@@ -68,7 +68,7 @@ function Content({ contentType }) {
     }
 
     return (
-        <section id="blog" className="py-16 px-4">
+        <section id="blog">
             <h1 className="text-4xl font-bold text-center mb-8">
                 {contentType === 'blog' ? 'Blog' : 'In den Medien'}
             </h1>

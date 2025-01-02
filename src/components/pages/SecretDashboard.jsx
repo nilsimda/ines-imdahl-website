@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../../utils/supaBaseClient';
 import ContentForm from '../ui/ContentForm';
 
-//TODO: DELETE, UPDATE?
+//TODO: UPDATE?
 
 const SecretDashboard = () => {
     const [activeTab, setActiveTab] = useState('blog');
     const [isAdding, setIsAdding] = useState(false);
     const [contents, setContents] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [pendingDeletion, setPendingDeletion] = useState(null);
 
     const initialContentState = {
         title: '',
@@ -90,6 +91,7 @@ const SecretDashboard = () => {
                 .eq('id', id);
 
             if (error) throw error;
+            setPendingDeletion(null); // Clear pending deletion after success
         } catch (error) {
             console.error('Error deleting content:', error);
         }
@@ -153,7 +155,7 @@ const SecretDashboard = () => {
                                 </div>
                             </div>
                             <button
-                                onClick={() => handleDelete(content.id)}
+                                onClick={() => setPendingDeletion(content)}
                                 className="text-gray-400 hover:text-red-500"
                             >
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,6 +165,30 @@ const SecretDashboard = () => {
                         </div>
                     ))}
             </div>
+
+            {/* Confirmation Modal */}
+            {pendingDeletion && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+                    <div className="bg-white rounded-lg p-6 max-w-sm w-full">
+                        <h3 className="text-lg font-semibold mb-4">Löschen bestätigen</h3>
+                        <p className="mb-6">Möchten Sie "{pendingDeletion.title}" wirklich löschen?</p>
+                        <div className="flex justify-end gap-4">
+                            <button
+                                onClick={() => setPendingDeletion(null)}
+                                className="px-4 py-2 text-gray-600 hover:text-gray-800"
+                            >
+                                Abbrechen
+                            </button>
+                            <button
+                                onClick={() => handleDelete(pendingDeletion.id)}
+                                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                            >
+                                Löschen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

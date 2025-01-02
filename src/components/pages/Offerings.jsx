@@ -34,7 +34,7 @@ function Offerings() {
     ];
 
     return (
-        <section id="offerings" className="py-16 px-4">
+        <section id="offerings">
             <h1 className="text-4xl font-bold text-center mb-16">Angebote</h1>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
