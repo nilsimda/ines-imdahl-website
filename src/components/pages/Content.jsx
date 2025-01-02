@@ -15,7 +15,7 @@ function Content({ contentType }) {
     const navigate = useNavigate();
 
     const getPostsPerPage = () => {
-        if (windowWidth < 768) return 1;      // Mobile
+        if (windowWidth < 768) return 1; // Mobile
         return 3;
     };
 

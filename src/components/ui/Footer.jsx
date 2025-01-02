@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="bg-transparent p-4 text-white">
             <div className="flex justify-between items-center px-5">
-                <p className="text-white m-0">
+                <p className="text-white m-0 hidden md:inline">
                     Diplom Psychologin | Speakerin | Researcherin
                 </p>
                 <div className="flex space-x-4">

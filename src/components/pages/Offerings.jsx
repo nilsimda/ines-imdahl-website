@@ -11,7 +11,12 @@ function Offerings() {
             image: forschungImage,
             icon: <FaMagnifyingGlass className="w-12 h-12" />,
             title: "Forschung",
-            description: "Seit über 30 Jahren ist die psychologische Forschung mein Kerngebiet. Gemeinsam mit dem Team vom @rheingold salon (hier Website Verlinken) lege ich Menschen auf die Couch und befrage sie zu ihrem Erleben & Verhalten. Nichts ist vor uns sicher: Trends, Zielgruppen, Marken, Werbung, Produkte oder Verfassungsanalysen. Wenn Sie sich für  unserere Forschung interessieren, stehe ich ihnen jederzeit zur Verfügung."
+            description: (<>
+                Seit über 30 Jahren ist die psychologische Forschung mein Kerngebiet. Gemeinsam mit dem Team vom
+                <a href="https://www.rheingold-salon.de/" className="text-blue-600 hover:underline"> rheingold salon </a>
+                lege ich Menschen auf die Couch und befrage sie zu ihrem Erleben & Verhalten. Nichts ist vor uns sicher: Trends, Zielgruppen, Marken, Werbung, Produkte oder Verfassungsanalysen. Wenn Sie sich für  unserere Forschung interessieren, stehe ich ihnen jederzeit zur Verfügung.
+            </>
+            ),
         },
         {
             image: vortrImage,
