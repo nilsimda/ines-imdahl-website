@@ -117,7 +117,7 @@ function Books() {
                                     {/* Book cover image */}
                                     <img
                                         src={book.coverImage}
-                                        alt={`Cover of ${book.title}`}
+                                        alt={`Cover von ${book.title}, ein Buch von Ines Imdahl`}
                                         className="absolute inset-0 w-full h-full object-cover transform transition duration-300 group-hover:scale-105"
                                     />
                                 </div>

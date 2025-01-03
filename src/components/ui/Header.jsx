@@ -7,7 +7,7 @@ function Header({ logoImage }) {
                 <img
                     src={logoImage}
                     className="w-full" // Image takes full width of the container
-                    alt="Logo" // Add alt text for accessibility
+                    alt="Logo von Ines Imdahl" // Add alt text for accessibility
                 />
             </div>
         </header>

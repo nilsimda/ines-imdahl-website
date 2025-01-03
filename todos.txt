@@ -1,6 +1,8 @@
 - Bildschirmgrösse
 - Footer auf Landing Page (nach oben?),
-- SEO: Image Captions
 
 Nice to have:
 - Better Search in Content
+- 404 page
+- rename images
+- make all content editable

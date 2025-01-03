@@ -67,7 +67,7 @@ function Offerings() {
                         <div className="w-full aspect-[4/3] relative mb-6 rounded-t-lg overflow-hidden">
                             <img
                                 src={offering.image}
-                                alt={offering.title}
+                                alt={`Bild von Ines Imdahl zum Thema ${offering.title}`}
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                         </div>

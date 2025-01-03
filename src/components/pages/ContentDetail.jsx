@@ -47,7 +47,7 @@ function ContentDetail() {
             <div className="relative pt-[56.25%] w-full rounded-t-lg overflow-hidden">
                 <img
                     src={content.imageUrl}
-                    alt={content.title}
+                    alt={`Bild zum Inhalt mit Titel ${content.title} von Ines Imdahl`}
                     className="absolute inset-0 w-full h-full object-contain bg-gray-100"
                 />
             </div>

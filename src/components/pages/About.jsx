@@ -10,7 +10,7 @@ function About() {
                 <div className="w-full transform transition-transform duration-300 hover:scale-105">
                     <img
                         src={imageOne}
-                        alt="About me"
+                        alt="Bild von Ines Imdahl"
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
                     />
                 </div>
@@ -44,7 +44,7 @@ function About() {
                 <div className="w-full order-none md:order-last transform transition-transform duration-300 hover:scale-105">
                     <img
                         src={imageTwo}
-                        alt="About me"
+                        alt="Ines Imdahl lacht"
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
                     />
                 </div>

@@ -159,7 +159,7 @@ function Content({ contentType }) {
                                     <div className="relative pt-[56.25%] w-full rounded-t-lg overflow-hidden">
                                         <img
                                             src={blog.imageUrl}
-                                            alt={blog.title}
+                                            alt={`Inhalt mit Titel ${blog.title} von Ines Imdahl`}
                                             className="absolute inset-0 w-full h-full object-contain bg-gray-100"
                                         />
                                     </div>

@@ -32,7 +32,7 @@ function App() {
         </>
       } />
       <Route path="/content/:id" element={<ContentDetail />} />
-      <Route path="/impressum/" element={<Impressum />} />
+      <Route path="/impressum" element={<Impressum />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
