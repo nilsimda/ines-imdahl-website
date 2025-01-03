@@ -120,10 +120,10 @@ function Content({ contentType }) {
 
     return (
         <section id={contentType}>
-            <h1 className="text-4xl font-bold text-center mb-8">
+            <h3 className="text-2xl font-bold text-center mb-8">
                 {contentType === 'blog' ? 'Blog' :
                     contentType === 'publications' ? 'Veröffentlichungen' : 'In den Medien'}
-            </h1>
+            </h3>
 
             {/* Search Bar */}
             <div className="max-w-md mx-auto mb-12 relative">

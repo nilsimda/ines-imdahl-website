@@ -9,7 +9,7 @@ function Offerings() {
     const offerings = [
         {
             image: forschungImage,
-            icon: <FaMagnifyingGlass className="w-12 h-12" />,
+            icon: <FaMagnifyingGlass className="w-6 h-6" />,
             title: "Forschung",
             description: (
                 <>
@@ -21,7 +21,7 @@ function Offerings() {
         },
         {
             image: vortrImage,
-            icon: <FaMicrophone className="w-12 h-12" />,
+            icon: <FaMicrophone className="w-6 h-6" />,
             title: "Vorträge",
             description: (
                 <>
@@ -32,7 +32,7 @@ function Offerings() {
         },
         {
             image: beratungImage,
-            icon: <FaUserGroup className="w-12 h-12" />,
+            icon: <FaUserGroup className="w-6 h-6" />,
             title: "Beratung & Coaching",
             description: (
                 <>
@@ -43,7 +43,7 @@ function Offerings() {
         },
         {
             image: tvImage,
-            icon: <FaTv className="w-12 h-12" />,
+            icon: <FaTv className="w-6 h-6" />,
             title: "TV & Medien Expertin",
             description: (
                 <>
@@ -56,9 +56,9 @@ function Offerings() {
 
     return (
         <section id="offerings">
-            <h1 className="text-4xl font-bold text-center mb-16">Angebote</h1>
+            <h3 className="text-2xl font-bold text-center mb-16">Angebote</h3>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 {offerings.map((offering, index) => (
                     <div
                         key={index}

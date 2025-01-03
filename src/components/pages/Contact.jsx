@@ -1,9 +1,8 @@
-
 import { FaInstagram, FaLinkedin, FaFacebook, FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 function Contact() {
     return (
         <section id="contact" className="flex flex-col items-center justify-center pb-8">
-            <h1 className="text-4xl font-bold mb-8">Kontakt</h1>
+            <h3 className="text-2xl font-bold mb-8">Kontakt</h3>
 
             <a
                 href="mailto:imdahl@rheingold-salon.de"
@@ -40,6 +39,12 @@ function Contact() {
                     <FaFacebook />
                 </a>
             </div>
+            <a
+                href="/impressum"
+                className="text-xl mt-4 flex border-t-2 border-grey-200 items-center hover:text-gray-600 transition-colors duration-300"
+            >
+                Impressum
+            </a>
         </section>
     );
 }

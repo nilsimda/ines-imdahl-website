@@ -10,6 +10,7 @@ import SecretLogin from './components/pages/SecretLogin';
 import SecretDashboard from './components/pages/SecretDashboard';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import ContentDetail from './components/pages/ContentDetail';
+import Impressum from './components/pages/Impressum';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <SecretDashboard />
         </ProtectedRoute>
       } />
+      <Route path="/impressum" element={<Impressum />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
