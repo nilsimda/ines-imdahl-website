@@ -119,9 +119,10 @@ function Content({ contentType }) {
     }
 
     return (
-        <section id="blog">
+        <section id={contentType}>
             <h1 className="text-4xl font-bold text-center mb-8">
-                {contentType === 'blog' ? 'Blog' : 'In den Medien'}
+                {contentType === 'blog' ? 'Blog' :
+                    contentType === 'publications' ? 'Veröffentlichungen' : 'In den Medien'}
             </h1>
 
             {/* Search Bar */}
@@ -152,7 +153,7 @@ function Content({ contentType }) {
                                 <div
                                     key={blog.id}
                                     onClick={() => handleCardClick(blog)}
-                                    className={`w-full md:w-[calc(33.333%-1rem)] min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg flex-shrink-0 hover:shadow-xl hover:scale-105 transition-all duration-300 flex flex-col transform ${isChangingPage ? 'translate-y-4' : 'translate-y-0'
+                                    className={`w-full md:w-[calc(33.333%-1rem)] min-w-[300px] max-w-[400px] bg-white rounded-lg shadow-lg flex-shrink-0 hover:shadow-xl hover:scale-105 hover:cursor-pointer transition-all duration-300 flex flex-col transform ${isChangingPage ? 'translate-y-4' : 'translate-y-0'
                                         }`}
                                 >
                                     <div className="relative pt-[56.25%] w-full rounded-t-lg overflow-hidden">

@@ -28,6 +28,8 @@ function App() {
           <div className="mt-40"></div>
           <Content contentType="media" />
           <div className="mt-40"></div>
+          <Content contentType="publications" />
+          <div className="mt-40"></div>
           <Contact />
         </>
       } />

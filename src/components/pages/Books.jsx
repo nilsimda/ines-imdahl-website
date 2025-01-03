@@ -54,10 +54,10 @@ function Books() {
                                 </div>
 
                                 <div className="flex justify-center">
-                                    <button className="flex items-center gap-2 hover:scale-105 transition duration-300 ease-in-out">
+                                    <a href={book.buyLink} target="_blank" className="flex items-center gap-2 hover:scale-105 transition duration-300 ease-in-out">
                                         <FaShoppingCart className="w-4 h-4" />
                                         Bestellen
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -37,6 +37,11 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
+                        <a href="#veröffentlichungen" onClick={event => handleLinkClick(event, "publications")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
+                            Veröffentlichungen
+                        </a>
+                    </li>
+                    <li>
                         <a href="#kontakt" onClick={event => handleLinkClick(event, "contact")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
                             Kontakt
                         </a>

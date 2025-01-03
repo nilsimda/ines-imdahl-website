@@ -1,0 +1,5 @@
+- Bildschirmgrösse
+- Abstände links (Buch, Über Mich),
+- Footer auf Landing Page (nach oben?),
+- Impressum
+- SEO: Image Captions
