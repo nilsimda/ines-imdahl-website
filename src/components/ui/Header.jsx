@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter'
 
 function Header({ logoImage }) {
     return (
@@ -9,7 +10,9 @@ function Header({ logoImage }) {
                     className="w-full" // Image takes full width of the container
                     alt="Logo von Ines Imdahl" // Add alt text for accessibility
                 />
-                <p className='text-white pl-5'>Diplom Psychologin | Speakerin | Researcherin </p>
+                <div className='text-white pl-5 text-lg'>
+                    <Typewriter words={["Diplom Psychologin", "Speakerin", "Marktforscherin"]} loop={0} cursor={true} />
+                </div>
             </div>
         </header>
     );
