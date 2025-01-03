@@ -1,8 +1,6 @@
-- Bildschirmgrösse
-- Footer auf Landing Page (nach oben?),
-
 Nice to have:
+- Rethink Hero
 - Better Search in Content
-- 404 page
 - rename images
+- modularize code
 - make all content editable

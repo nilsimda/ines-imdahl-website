@@ -9,6 +9,7 @@ function Header({ logoImage }) {
                     className="w-full" // Image takes full width of the container
                     alt="Logo von Ines Imdahl" // Add alt text for accessibility
                 />
+                <p className='text-white pl-5'>Diplom Psychologin | Speakerin | Researcherin </p>
             </div>
         </header>
     );

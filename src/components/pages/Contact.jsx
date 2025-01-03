@@ -12,7 +12,8 @@ function Contact() {
             </a>
             <p className="text-xl mb-4 flex items-center"><FaPhone className="mr-2" /> 0221-86006-0</p>
             <a
-                href="#"
+                href="https://maps.app.goo.gl/g3fxG6YiKFzm4CFE8"
+                target="_blank"
                 className="text-xl mb-4 flex items-center hover:text-gray-600 transition-colors duration-300">
                 <FaMapMarkerAlt className="mr-2" />Hohe Straße 160-168, 50667 Köln
             </a>
@@ -41,7 +42,7 @@ function Contact() {
             </div>
             <a
                 href="/impressum"
-                className="text-xl mt-4 flex border-t-2 border-grey-200 items-center hover:text-gray-600 transition-colors duration-300"
+                className="text-xl mt-10 flex border-t-2 border-grey-200 items-center hover:text-gray-600 transition-colors duration-300"
             >
                 Impressum
             </a>
