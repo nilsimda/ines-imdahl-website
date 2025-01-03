@@ -6,9 +6,6 @@ import Contact from './components/pages/Contact';
 import Content from './components/pages/Content';
 import Books from './components/pages/Books';
 import Offerings from './components/pages/Offerings';
-import SecretLogin from './components/pages/SecretLogin';
-import SecretDashboard from './components/pages/SecretDashboard';
-import ProtectedRoute from './components/auth/ProtectedRoute';
 import ContentDetail from './components/pages/ContentDetail';
 import Impressum from './components/pages/Impressum';
 
@@ -35,13 +32,7 @@ function App() {
         </>
       } />
       <Route path="/content/:id" element={<ContentDetail />} />
-      <Route path="/secret-login" element={<SecretLogin />} />
-      <Route path="/secret-dashboard" element={
-        <ProtectedRoute>
-          <SecretDashboard />
-        </ProtectedRoute>
-      } />
-      <Route path="/impressum" element={<Impressum />} />
+      <Route path="/impressum/" element={<Impressum />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
