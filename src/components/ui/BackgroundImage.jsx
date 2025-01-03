@@ -1,5 +1,4 @@
 import React from 'react';
-import ParticleBackground from './ParticleBackground';
 
 function BackgroundImage({ imageUrl }) {
     return (
@@ -15,7 +14,6 @@ function BackgroundImage({ imageUrl }) {
                 className="fixed inset-0 z-[-2] bg-gradient-to-r from-pink-500/10 to-pink-300/10"
                 style={{ mixBlendMode: 'overlay' }}
             />
-            <ParticleBackground />
         </>
     );
 }
