@@ -1,6 +1,7 @@
+TODOS:
+Make cards clickable instead of using links Offerings
 Nice to have:
-- Rethink Hero
-- Better Search in Content
+- Better Search in Content (tags?)
 - rename images
 - modularize code
 - make all content editable
