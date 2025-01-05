@@ -24,9 +24,9 @@ function App() {
           <div className="mt-40"></div>
           <Books />
           <div className="mt-40"></div>
-          <Content contentType="media" />
+          <Content contentType="media_appearance" />
           <div className="mt-40"></div>
-          <Content contentType="publications" />
+          <Content contentType="publication" />
           <div className="mt-40"></div>
           <Contact />
         </>

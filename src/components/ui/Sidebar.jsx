@@ -48,12 +48,12 @@ function Sidebar() {
                             </a>
                         </li>
                         <li>
-                            <a href="#in-den-medien" onClick={event => handleLinkClick(event, "media")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
+                            <a href="#in-den-medien" onClick={event => handleLinkClick(event, "media_appearance")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
                                 In den Medien
                             </a>
                         </li>
                         <li>
-                            <a href="#veröffentlichungen" onClick={event => handleLinkClick(event, "publications")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
+                            <a href="#veröffentlichungen" onClick={event => handleLinkClick(event, "publication")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
                                 Veröffentlichungen
                             </a>
                         </li>
