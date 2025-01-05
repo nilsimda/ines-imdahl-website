@@ -122,7 +122,7 @@ function Content({ contentType }) {
         <section id={contentType}>
             <h3 className="text-2xl font-bold text-center mb-8">
                 {contentType === 'blog' ? 'Blog' :
-                    contentType === 'publications' ? 'Veröffentlichungen' : 'In den Medien'}
+                    contentType === 'publication' ? 'Veröffentlichungen' : 'In den Medien'}
             </h3>
 
             {/* Search Bar */}
