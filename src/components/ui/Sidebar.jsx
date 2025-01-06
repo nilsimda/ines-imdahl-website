@@ -1,72 +1,137 @@
 import React, { useEffect, useState } from 'react';
-import { scrollToSection } from '../../utils/scrollToSection';
+import { scrollToSection, scrollToTop } from '../../utils/scrollToSection';
+import { Menu, X } from 'lucide-react';
+import logoUrl from '../../assets/name.png';
+import MobileMenu from './MobileMenu';
 
-function Sidebar() {
-    const [showSideBar, setShowSideBar] = useState(false)
-    const [isSidebarLoaded, setIsSidebarLoaded] = useState(false)
+const DynamicNavigation = () => {
+    const [showNav, setShowNav] = useState(false);
+    const [isNavLoaded, setIsNavLoaded] = useState(false);
+    const [isScrolledPastLanding, setIsScrolledPastLanding] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setShowSideBar(true);
-            setIsSidebarLoaded(true);
-        }, 1000); // 1000ms delay to match the logo animation
+            setShowNav(true);
+            setIsNavLoaded(true);
+        }, 1000);
 
-        return () => clearTimeout(timer); // Clean up the timer
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            setIsScrolledPastLanding(scrollPosition > windowHeight * 0.7);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const handleLinkClick = (event, sectionId) => {
         event.preventDefault();
         scrollToSection(sectionId);
+        setIsMobileMenuOpen(false);
     };
 
-    return (
-        <aside
-            className={`w-64 bg-transparent p-10 text-white transition-opacity duration-1000 ease-in-out ${isSidebarLoaded ? 'opacity-100' : 'opacity-0'
-                }`}
-        >
-            {showSideBar &&
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#über-mich" onClick={event => handleLinkClick(event, "about")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                Über mich
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#angebote" onClick={event => handleLinkClick(event, "offerings")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                Angebote
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#blog" onClick={event => handleLinkClick(event, "blog")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#bücher" onClick={event => handleLinkClick(event, "books")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                Bücher
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#in-den-medien" onClick={event => handleLinkClick(event, "media_appearance")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                In den Medien
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#veröffentlichungen" onClick={event => handleLinkClick(event, "publication")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                Veröffentlichungen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#kontakt" onClick={event => handleLinkClick(event, "contact")} className="block py-3 text-2xl hover:scale-105 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 after:bg-white hover:after:w-full after:ease-in-out transition duration-300 ease-in-out">
-                                Kontakt
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            }
-        </aside>
-    );
-}
+    const navLinks = [
+        { href: "#über-mich", id: "about", text: "Über mich" },
+        { href: "#angebote", id: "offerings", text: "Angebote" },
+        { href: "#blog", id: "blog", text: "Blog" },
+        { href: "#bücher", id: "books", text: "Bücher" },
+        { href: "#in-den-medien", id: "media_appearance", text: "In den Medien" },
+        { href: "#veröffentlichungen", id: "publication", text: "Veröffentlichungen" },
+        { href: "#kontakt", id: "contact", text: "Kontakt" }
+    ];
 
-export default Sidebar;
+    // Common link animation classes
+    const linkAnimationClasses = "relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:ease-in-out hover:scale-105 transition duration-300 ease-in-out";
+
+    // Desktop navigation classes
+    const navClasses = isScrolledPastLanding
+        ? "fixed top-0 left-0 right-0 bg-black bg-opacity-90 flex items-center h-16 transition-all duration-300 z-50 px-6"
+        : "w-64 bg-transparent p-10 transition-all duration-300"; // Removed md:block to show on all screens
+
+    const desktopLinkClasses = isScrolledPastLanding
+        ? `block px-4 text-white text-sm ${linkAnimationClasses}`
+        : `block py-3 text-2xl text-white ${linkAnimationClasses}`;
+
+    const desktopListClasses = isScrolledPastLanding
+        ? "hidden md:flex flex-row space-x-4 items-center flex-1 justify-end"
+        : "block"; // Show on all screens when in sidebar mode
+
+    const MobileMenuButton = () => (
+        <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden text-white p-2 focus:outline-none"
+            aria-label="Toggle mobile menu"
+        >
+            {isMobileMenuOpen ? '' : <Menu size={24} />}
+        </button>
+    );
+
+
+    return (
+        <>
+            <nav className={`${navClasses} ${isNavLoaded ? 'opacity-100' : 'opacity-0'}`}>
+                {showNav && (
+                    <>
+                        {/* Logo section */}
+                        {isScrolledPastLanding && (
+                            <a
+                                href="#"
+                                onClick={scrollToTop}
+                                className="flex-shrink-0 mr-8 transform hover:scale-105 transition-transform duration-300 ease-in-out relative group"
+                            >
+                                <img
+                                    src={logoUrl}  // Update with your logo path
+                                    alt="Logo"
+                                    className="h-8 w-auto"
+                                />
+                                {/* Logo hover effect - subtle glow */}
+                                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full blur-md"></div>
+                            </a>
+                        )}
+
+                        {/* Navigation links */}
+                        <ul className={desktopListClasses}>
+                            {navLinks.map((link) => (
+                                <li key={link.id}>
+                                    <a
+                                        href={link.href}
+                                        onClick={(event) => handleLinkClick(event, link.id)}
+                                        className={desktopLinkClasses}
+                                    >
+                                        {link.text}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+
+                        {/* Mobile menu button - only show when scrolled */}
+                        {isScrolledPastLanding &&
+                            <MobileMenuButton />
+                        }
+                    </>
+                )}
+            </nav>
+            {/* Only show mobile menu when scrolled past landing */}
+            {isScrolledPastLanding && <MobileMenu
+                isMobileMenuOpen={isMobileMenuOpen}
+                setIsMobileMenuOpen={setIsMobileMenuOpen}
+                linkAnimationClasses={linkAnimationClasses}
+                handleLinkClick={handleLinkClick}
+                navLinks={navLinks}
+            />}
+            {isMobileMenuOpen && isScrolledPastLanding && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                ></div>
+            )}
+        </>
+    );
+};
+
+export default DynamicNavigation;
