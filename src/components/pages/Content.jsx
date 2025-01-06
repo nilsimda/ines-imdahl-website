@@ -127,6 +127,7 @@ function Content({ contentType }) {
         onSwipedLeft: () => handleSwipe('LEFT'),
         onSwipedRight: () => handleSwipe('RIGHT'),
         preventDefaultTouchmoveEvent: true,
+        preventScrollOnSwipe: true,
         trackMouse: true,
         trackTouch: true,
         delta: 50, // Minimum distance in pixels before a swipe is registered
