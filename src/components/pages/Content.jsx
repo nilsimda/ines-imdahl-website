@@ -113,6 +113,20 @@ function Content({ contentType }) {
         return pages;
     };
 
+    function getEmbedUrl(url) {
+        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+            const videoId = url.includes('youtu.be')
+                ? url.split('/').pop()
+                : url.split('v=')[1]?.split('&')[0];
+            return `https://www.youtube.com/embed/${videoId}`;
+        }
+        if (url.includes('vimeo.com')) {
+            const videoId = url.split('/').pop();
+            return `https://player.vimeo.com/video/${videoId}`;
+        }
+        return url; // Return original URL if no matching provider
+    }
+
 
     if (loading) {
         return <div className="text-center py-16">Lädt...</div>;
@@ -157,11 +171,20 @@ function Content({ contentType }) {
                                         }`}
                                 >
                                     <div className="relative pt-[56.25%] w-full rounded-t-lg overflow-hidden">
-                                        <img
-                                            src={blog.imageUrl}
-                                            alt={`Inhalt mit Titel ${blog.title} von Ines Imdahl`}
-                                            className="absolute inset-0 w-full h-full object-contain bg-gray-100"
-                                        />
+                                        {blog.contentType !== 'media_appearance' ? (
+                                            <img
+                                                src={blog.imageUrl}
+                                                alt={`Inhalt mit Titel ${blog.title} von Ines Imdahl`}
+                                                className="absolute inset-0 w-full h-full object-contain bg-gray-100"
+                                            />
+                                        ) : (
+                                            <iframe
+                                                src={getEmbedUrl(blog.videoUrl)}
+                                                className="absolute inset-0 w-full h-full"
+                                                frameBorder="0"
+                                                allowFullScreen
+                                            ></iframe>
+                                        )}
                                     </div>
                                     <div className="p-6 flex-grow flex flex-col">
                                         <h3 className="text-xl font-semibold mb-2">
