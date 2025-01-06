@@ -19,6 +19,7 @@ function Contact() {
             </a>
             <div className="flex space-x-6">
                 <a
+                    aria-label="LinkedIn Profil von Ines Imdahl"
                     href="https://de.linkedin.com/in/ines-imdahl"
                     className="text-2xl hover:scale-110 transition-transform duration-300"
                     target="_blank"
@@ -26,6 +27,7 @@ function Contact() {
                     <FaLinkedin />
                 </a>
                 <a
+                    aria-label="Instagram Profil von Ines Imdahl"
                     href="https://www.instagram.com/ini_imsta/"
                     className="text-2xl hover:scale-110 transition-transform duration-300"
                     target="_blank"
@@ -33,6 +35,7 @@ function Contact() {
                     <FaInstagram />
                 </a>
                 <a
+                    aria-label="Facebook Profil von Ines Imdahl"
                     href="https://www.facebook.com/ines.imdahl/"
                     className="text-2xl hover:scale-110 transition-transform duration-300"
                     target="_blank"
