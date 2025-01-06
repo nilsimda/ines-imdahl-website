@@ -4,6 +4,7 @@ import Sidebar from '../ui/Sidebar';
 import Footer from '../ui/Footer';
 import imageUrl from '../../assets/pink.webp';
 import logoImage from '../../assets/name.webp';
+import logoImageSmall from '../../assets/name_300.webp'
 
 function LandingPage({ }) {
     return (
@@ -11,7 +12,7 @@ function LandingPage({ }) {
             <BackgroundImage imageUrl={imageUrl} />
 
             <div className="w-128 flex flex-col">
-                <Header logoImage={logoImage} />
+                <Header logoImage={logoImage} logoImageSmall={logoImageSmall} />
 
                 <div className="flex-1">
                     <Sidebar logoUrl={logoImage} />

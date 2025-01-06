@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter'
 
-function Header({ logoImage }) {
+function Header({ logoImage, logoImageSmall }) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [showTypewriter, setShowTypewriter] = useState(false);
 
@@ -27,6 +27,7 @@ function Header({ logoImage }) {
                 {/* Container with maximum width */}
                 <img
                     src={logoImage}
+                    srcSet={`${logoImageSmall} 300w, ${logoImage} 500w`}
                     className={`w-full transition-all duration-1000 ease-in-out ${isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
                         }`} // Image takes full width of the container and applies animation classes
                     alt="Logo von Ines Imdahl" // Add alt text for accessibility

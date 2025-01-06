@@ -4,10 +4,8 @@ import forschungImage from '../../assets/forschung.webp';
 import beratungImage from '../../assets/beratung.webp';
 import tvImage from '../../assets/tv.webp';
 import vortrImage from '../../assets/vorträge.webp'
-import { useNavigate } from 'react-router-dom';
 
 function Offerings() {
-    const navigate = useNavigate();
     const offerings = [
         {
             image: forschungImage,
