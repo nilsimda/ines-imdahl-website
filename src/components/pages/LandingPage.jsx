@@ -3,13 +3,14 @@ import Header from '../ui/Header';
 import Sidebar from '../ui/Sidebar';
 import Footer from '../ui/Footer';
 import imageUrl from '../../assets/pink.webp';
+import imageUrlSmall from '../../assets/pink_800.webp';
 import logoImage from '../../assets/name.webp';
 import logoImageSmall from '../../assets/name_300.webp'
 
 function LandingPage({ }) {
     return (
         <div className="relative min-h-screen flex">
-            <BackgroundImage imageUrl={imageUrl} />
+            <BackgroundImage imageUrl={imageUrl} imageUrlSmall={imageUrlSmall} />
 
             <div className="w-128 flex flex-col">
                 <Header logoImage={logoImage} logoImageSmall={logoImageSmall} />
