@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../../utils/supaBaseClient';
+import Embed from '../ui/Embed';
 
 function ContentDetail() {
     const { id } = useParams();
@@ -44,13 +45,7 @@ function ContentDetail() {
 
             <h1 className="text-4xl font-bold mb-8">{content.title}</h1>
 
-            <div className="relative pt-[56.25%] w-full rounded-t-lg overflow-hidden">
-                <img
-                    src={content.imageUrl}
-                    alt={`Bild zum Inhalt mit Titel ${content.title} von Ines Imdahl`}
-                    className="absolute inset-0 w-full h-full object-contain bg-gray-100"
-                />
-            </div>
+            <Embed content={content} />
 
             <div className="prose max-w-none">
                 <p className="whitespace-pre-wrap text-gray-700">{content.text}</p>

@@ -1,7 +1,8 @@
 TODOS:
-Make cards clickable instead of using links Offerings
+- swipe left on mobile?
+- sidebar -> nav bar
+- video on content detail
 Nice to have:
+- share content
 - Better Search in Content (tags?)
-- rename images
-- modularize code
-- make all content editable
+- rename images, compress?
