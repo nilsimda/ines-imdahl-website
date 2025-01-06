@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import { supabase } from '../../utils/supaBaseClient';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
@@ -114,6 +115,24 @@ function Content({ contentType }) {
         return pages;
     };
 
+    const handleSwipe = (direction) => {
+        if (direction === 'LEFT' && currentPage < totalPages) {
+            paginate(currentPage + 1);
+        } else if (direction === 'RIGHT' && currentPage > 1) {
+            paginate(currentPage - 1);
+        }
+    }
+
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => handleSwipe('LEFT'),
+        onSwipedRight: () => handleSwipe('RIGHT'),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+        trackTouch: true,
+        delta: 50, // Minimum distance in pixels before a swipe is registered
+        swipeDuration: 500
+    });
+
 
     if (loading) {
         return <div className="text-center py-16">Lädt...</div>;
@@ -139,7 +158,7 @@ function Content({ contentType }) {
             </div>
 
             {/* Blog Posts */}
-            <div className="max-w-7xl mx-auto">
+            <div {...swipeHandlers} className="max-w-7xl mx-auto">
                 {filteredBlogs.length === 0 ? (
                     <div className="text-center text-gray-600 py-8">
                         Keine Beiträge gefunden.
