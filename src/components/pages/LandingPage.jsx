@@ -2,8 +2,8 @@ import BackgroundImage from '../ui/BackgroundImage';
 import Header from '../ui/Header';
 import Sidebar from '../ui/Sidebar';
 import Footer from '../ui/Footer';
-import imageUrl from '../../assets/pink.jpg';
-import logoImage from '../../assets/name.png';
+import imageUrl from '../../assets/pink.webp';
+import logoImage from '../../assets/name.webp';
 
 function LandingPage({ }) {
     return (
@@ -14,7 +14,7 @@ function LandingPage({ }) {
                 <Header logoImage={logoImage} />
 
                 <div className="flex-1">
-                    <Sidebar />
+                    <Sidebar logoUrl={logoImage} />
                 </div>
             </div>
 

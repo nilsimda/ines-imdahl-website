@@ -1,5 +1,5 @@
 
-import { Menu, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function MobileMenu({ isMobileMenuOpen, setIsMobileMenuOpen, linkAnimationClasses, handleLinkClick, navLinks }) {
     return (

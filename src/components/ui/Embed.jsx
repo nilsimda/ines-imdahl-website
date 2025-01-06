@@ -28,7 +28,7 @@ export default function Embed({ content }) {
                     title={content.title}
                     className="absolute inset-0 w-full h-full"
                     allowFullScreen
-                    loading="lazy"
+                    loading="lazy" //TODO: load this in the transition?
                 ></iframe>
             )}
         </div>

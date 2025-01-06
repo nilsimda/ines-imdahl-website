@@ -1,6 +1,6 @@
 import React from 'react';
-import imageOne from '../../assets/image1.jpg';
-import imageTwo from '../../assets/image2.jpg';
+import imageOne from '../../assets/image1.webp';
+import imageTwo from '../../assets/image2.webp';
 
 function About() {
     return (

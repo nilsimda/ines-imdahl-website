@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { scrollToSection, scrollToTop } from '../../utils/scrollToSection';
 import { Menu, X } from 'lucide-react';
-import logoUrl from '../../assets/name.png';
 import MobileMenu from './MobileMenu';
 
-const DynamicNavigation = () => {
+const DynamicNavigation = ({ logoUrl }) => {
     const [showNav, setShowNav] = useState(false);
     const [isNavLoaded, setIsNavLoaded] = useState(false);
     const [isScrolledPastLanding, setIsScrolledPastLanding] = useState(false);

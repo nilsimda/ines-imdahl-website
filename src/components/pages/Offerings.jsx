@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaMagnifyingGlass, FaMicrophone, FaUserGroup, FaTv } from "react-icons/fa6";
-import forschungImage from '../../assets/forschung.jpg'
-import beratungImage from '../../assets/beratung.jpg'
-import tvImage from '../../assets/tv.png'
-import vortrImage from '../../assets/vorträge.jpg'
+import forschungImage from '../../assets/forschung.webp';
+import beratungImage from '../../assets/beratung.webp';
+import tvImage from '../../assets/tv.webp';
+import vortrImage from '../../assets/vorträge.webp'
 import { useNavigate } from 'react-router-dom';
 
 function Offerings() {
