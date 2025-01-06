@@ -21,6 +21,7 @@ export default function Embed({ content }) {
                     src={content.imageUrl}
                     alt={`Inhalt mit Titel ${content.title} von Ines Imdahl`}
                     className="absolute inset-0 w-full h-full object-contain bg-gray-100"
+                    loading="lazy"
                 />
             ) : (
                 <iframe

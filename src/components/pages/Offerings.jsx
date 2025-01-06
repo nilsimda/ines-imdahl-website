@@ -70,6 +70,7 @@ function Offerings() {
                                 src={offering.image}
                                 alt={`Bild von Ines Imdahl zum Thema ${offering.title}`}
                                 className="absolute inset-0 w-full h-full object-cover"
+                                load="lazy"
                             />
                         </div>
                         <div className="mb-6 text-gray-700">

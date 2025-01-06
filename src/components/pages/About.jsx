@@ -12,6 +12,7 @@ function About() {
                         src={imageOne}
                         alt="Bild von Ines Imdahl"
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                        loading="lazy"
                     />
                 </div>
 
@@ -46,6 +47,7 @@ function About() {
                         src={imageTwo}
                         alt="Ines Imdahl lacht"
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                        loading='lazy'
                     />
                 </div>
 
