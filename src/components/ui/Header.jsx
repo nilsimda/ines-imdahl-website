@@ -33,7 +33,6 @@ function Header({ logoImage, logoImageSmall }) {
                     alt="Logo von Ines Imdahl" // Add alt text for accessibility
                     loading='eager'
                     fetchpriority="high"
-                    decoding='async'
                 />
                 <div className="text-white pl-5 text-lg">
                     {showTypewriter && <Typewriter

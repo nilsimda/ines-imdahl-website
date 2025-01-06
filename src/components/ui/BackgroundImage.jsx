@@ -10,7 +10,6 @@ function BackgroundImage({ imageUrl, imageUrlSmall }) {
                 alt="Background Image of Ines Imdahl"
                 loading="eager"
                 fetchpriority="high"
-                decoding="async"
             />
             <div
                 className="fixed inset-0 z-[-2] bg-gradient-to-r from-pink-500/10 to-pink-300/10 mix-blend-overlay"
