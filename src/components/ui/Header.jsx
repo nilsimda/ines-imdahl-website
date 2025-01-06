@@ -30,6 +30,7 @@ function Header({ logoImage }) {
                     className={`w-full transition-all duration-1000 ease-in-out ${isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
                         }`} // Image takes full width of the container and applies animation classes
                     alt="Logo von Ines Imdahl" // Add alt text for accessibility
+                    loading='eager'
                 />
                 <div className="text-white pl-5 text-lg">
                     {showTypewriter && <Typewriter
