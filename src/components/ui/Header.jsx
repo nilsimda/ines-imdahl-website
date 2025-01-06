@@ -31,6 +31,7 @@ function Header({ logoImage }) {
                         }`} // Image takes full width of the container and applies animation classes
                     alt="Logo von Ines Imdahl" // Add alt text for accessibility
                     loading='eager'
+                    fetchpriority="high"
                 />
                 <div className="text-white pl-5 text-lg">
                     {showTypewriter && <Typewriter
