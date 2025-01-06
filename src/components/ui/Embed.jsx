@@ -25,6 +25,7 @@ export default function Embed({ content }) {
             ) : (
                 <iframe
                     src={getEmbedUrl(content.videoUrl)}
+                    title={content.title}
                     className="absolute inset-0 w-full h-full"
                     allowFullScreen
                 ></iframe>

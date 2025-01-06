@@ -199,6 +199,7 @@ function Content({ contentType }) {
                 {totalPages > 1 && (
                     <div className="flex justify-center items-center mt-12 gap-2">
                         <button
+                            aria-label="Show Content to the Left"
                             onClick={() => paginate(currentPage - 1)}
                             disabled={currentPage === 1}
                             className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:hover:bg-transparent transition-colors duration-300"
@@ -208,6 +209,7 @@ function Content({ contentType }) {
 
                         {getPageNumbers().map((pageNumber, index) => (
                             <button
+                                aria-label={`Show content on page ${pageNumber}`}
                                 key={index}
                                 onClick={() => pageNumber !== '...' && paginate(pageNumber)}
                                 disabled={pageNumber === '...'}
@@ -221,6 +223,7 @@ function Content({ contentType }) {
                         ))}
 
                         <button
+                            aria-label="Show Content to the Right"
                             onClick={() => paginate(currentPage + 1)}
                             disabled={currentPage === totalPages}
                             className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:hover:bg-transparent transition-colors duration-300"
