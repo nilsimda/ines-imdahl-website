@@ -8,33 +8,37 @@ import Books from './components/pages/Books';
 import Offerings from './components/pages/Offerings';
 import ContentDetail from './components/pages/ContentDetail';
 import Impressum from './components/pages/Impressum';
+import CookieBanner from './components/ui/CookieBanner';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={
-        <>
-          <LandingPage />
-          <div className="mt-40"></div>
-          <About />
-          <div className="mt-40"></div>
-          <Offerings />
-          <div className="mt-40"></div>
-          <Content contentType="blog" />
-          <div className="mt-40"></div>
-          <Books />
-          <div className="mt-40"></div>
-          <Content contentType="media_appearance" />
-          <div className="mt-40"></div>
-          <Content contentType="publication" />
-          <div className="mt-40"></div>
-          <Contact />
-        </>
-      } />
-      <Route path="/content/:id" element={<ContentDetail />} />
-      <Route path="/impressum" element={<Impressum />} />
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <LandingPage />
+            <div className="mt-40"></div>
+            <About />
+            <div className="mt-40"></div>
+            <Offerings />
+            <div className="mt-40"></div>
+            <Content contentType="blog" />
+            <div className="mt-40"></div>
+            <Books />
+            <div className="mt-40"></div>
+            <Content contentType="media_appearance" />
+            <div className="mt-40"></div>
+            <Content contentType="publication" />
+            <div className="mt-40"></div>
+            <Contact />
+          </>
+        } />
+        <Route path="/content/:id" element={<ContentDetail />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+      <CookieBanner />
+    </>
   );
 }
 

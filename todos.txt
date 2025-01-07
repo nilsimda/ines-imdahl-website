@@ -1,14 +1,9 @@
 TODOS:
-- swipe left on mobile?
-- sidebar -> nav bar
-- video on content detail
+cookies
+markdown
+seo
+
 Nice to have:
 - share content
 - Better Search in Content (tags?)
-- rename images, compress?
-
-linkedin kurs
-cookies
-videos
-markdown
-seo
+- lighthouse score
