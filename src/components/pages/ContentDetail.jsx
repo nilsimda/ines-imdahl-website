@@ -47,7 +47,7 @@ function ContentDetail() {
 
             <Embed content={content} />
 
-            <div className="prose max-w-none">
+            <div className="prose max-w-none mt-8">
                 <p className="whitespace-pre-wrap text-gray-700">{content.text}</p>
             </div>
 
