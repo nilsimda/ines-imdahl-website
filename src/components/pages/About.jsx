@@ -1,13 +1,17 @@
 import React from 'react';
 import imageOne from '../../assets/image1.webp';
 import imageTwo from '../../assets/image2.webp';
+import courseImage from '../../assets/courseImage.webp'
+import Timeline from '../ui/Timeline';
+import { FaArrowAltCircleRight, FaEnvelopeOpenText } from 'react-icons/fa';
+
 
 function About() {
     return (
         <section id="about" className="py-16 px-4 max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-32 items-center">
                 {/* First image with hover effect and rounded corners */}
-                <div className="w-full transform transition-transform duration-300 hover:scale-105">
+                <div className="w-full transform transition-transform duration-300 hover:scale-105 order-1">
                     <img
                         src={imageOne}
                         alt="Bild von Ines Imdahl"
@@ -17,7 +21,7 @@ function About() {
                 </div>
 
                 {/* Main text content with improved typography and spacing */}
-                <div className="space-y-6 pl-4 md:col-span-2 md:pr-16">
+                <div className="space-y-6 pl-4 md:col-span-2 md:pr-16 order-2">
                     <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2 inline-block">
                         Über mich
                     </h3>
@@ -41,8 +45,8 @@ function About() {
                     </div>
                 </div>
 
-                {/* Second image with matching hover effect */}
-                <div className="w-full order-none md:order-last transform transition-transform duration-300 hover:scale-105">
+                {/* Second image - appears before timeline on mobile, after on desktop */}
+                <div className="w-full transform transition-transform duration-300 hover:scale-105 order-3 md:order-4">
                     <img
                         src={imageTwo}
                         alt="Ines Imdahl lacht"
@@ -52,29 +56,59 @@ function About() {
                 </div>
 
                 {/* Timeline section with enhanced styling */}
-                <div className="space-y-6 pl-4 md:col-span-2 md:pl-16">
+                <div className="space-y-6 pl-4 md:col-span-2 md:pl-16 order-4 md:order-3">
                     <h3 className="text-2xl font-semibold text-gray-800 border-b-2 border-gray-200 pb-2 inline-block">
                         Einige besondere Highlights in meinem Leben:
                     </h3>
-                    <div className="border-l-2 border-gray-300 pl-8 space-y-8">
-                        {/* Timeline items with enhanced visual elements */}
-                        {[
-                            "Studium der Psychologie an der Universität zu Köln",
-                            "Hochzeit mit meiner großen Liebe Jens Lönneker",
-                            "2000, 2004, 2007, 2009 Geburten unserer vier fantastischen Kinder",
-                            "2011 Gründung des rheingold salon als psychologische Forschungsagentur",
-                            "2016 & 2022 Erscheinen meiner Bücher",
-                            "2022 gewählt zu den 40 over 40 Germanys most inspiring women",
-                            "2024 gewählt zur LinkedIn TopVoice (und immer häufiger nennt man mich LinkedIn Influencerin)"
-                        ].map((item, index) => (
-                            <div key={index} className="relative group">
-                                <div className="absolute -left-10 top-1 w-4 h-4 bg-gray-300 rounded-full group-hover:bg-gray-400 transition-colors duration-300"></div>
-                                <div className="absolute -left-10 top-1 w-4 h-4 bg-gray-300 bg-opacity-50 rounded-full animate-ping"></div>
-                                <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">{item}</p>
-                            </div>
-                        ))}
+                    <Timeline />
+                </div>
+
+                {/* Course image */}
+                <div className="w-full transform transition-transform duration-300 hover:scale-105 order-5">
+                    <img
+                        src={courseImage}
+                        alt="LinkedIn Kurs Vorschaubild"
+                        className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                        loading="lazy"
+                    />
+                </div>
+                <div className="space-y-6 pl-4 md:col-span-2 md:pr-16 order-6">
+                    <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2 inline-block">
+                        Mein LinkedIn Learning Kurs
+                    </h3>
+                    <div className="text-gray-600 space-y-4 leading-relaxed">
+                        <p>
+                            80 Prozent der Führungskräfte von Unternehmen glauben, die Bedürfnisse und Wünsche ihrer Kund:innen zu kennen – nur 8 Prozent der Kund:innen sehen das auch so. Gehören Sie nicht länger zu denjenigen, die Ihre Kund:innen nur glauben zu verstehen. Lernen Sie in diesem LinkedIn Learning-Audiokurs, wie Sie die Werkzeuge der Marktforschung nutzen, die richtigen Menschen für Ihr Unternehmen befragen und deren Antworten interpretieren, um Ihre Geschäftsstrategien auf die nächste Ebene zu heben.
+                        </p>
+                        <p>
+                            Ines Imdahl rüstet Sie mit dem Wissen und den Fertigkeiten, um hinter die Fassade blicken zu können und die wahren Beweggründe und Meinungen Ihrer Kund:innen zu erkennen. Nicht immer sind diese so vernünftig oder offenkundig, wie es auf den ersten Blick scheint. Sammeln Sie daher nicht länger nur Daten, sondern lernen Sie, tiefe Einblicke zu gewinnen.
+                        </p>
+                        <p>
+                            Sie sind bereit, mit Ines Imdahl die geheime Logik des Marktes zu entschlüsseln? Die Geheimnisse hinter dem Verhalten Ihrer Kund:innen zu lüften und Ihre Unternehmensentscheidungen an Ihren Kund:innen auszurichten? Dann nehmen Sie sich ein wenig Zeit und begleiten Sie Ines in die faszinierende Welt der Marktforschung.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                            <a
+                                href="https://www.linkedin.com/learning/marktforschung-grundlagen"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex gap-2 items-center justify-center px-6 py-3 bg-black text-white font-medium rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
+                            >
+                                <FaArrowAltCircleRight />
+                                Zum Kurs
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/ines-imdahl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex gap-2 items-center justify-center px-6 py-3 bg-black text-white font-medium rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
+                            >
+                                <FaEnvelopeOpenText />
+                                Gratis Kurs-Link erhalten
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );

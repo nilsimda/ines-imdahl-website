@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useSwipeable } from 'react-swipeable';
 import { supabase } from '../../utils/supaBaseClient';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
@@ -115,25 +114,6 @@ function Content({ contentType }) {
         return pages;
     };
 
-    const handleSwipe = (direction) => {
-        if (direction === 'LEFT' && currentPage < totalPages) {
-            paginate(currentPage + 1);
-        } else if (direction === 'RIGHT' && currentPage > 1) {
-            paginate(currentPage - 1);
-        }
-    }
-
-    const swipeHandlers = useSwipeable({
-        onSwipedLeft: () => handleSwipe('LEFT'),
-        onSwipedRight: () => handleSwipe('RIGHT'),
-        preventDefaultTouchmoveEvent: true,
-        preventScrollOnSwipe: true,
-        trackMouse: false,
-        trackTouch: true,
-        delta: 50, // Minimum distance in pixels before a swipe is registered
-        swipeDuration: 500
-    });
-
 
     if (loading) {
         return <div className="text-center py-16">Lädt...</div>;
@@ -159,7 +139,7 @@ function Content({ contentType }) {
             </div>
 
             {/* Blog Posts */}
-            <div {...swipeHandlers} className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 {filteredBlogs.length === 0 ? (
                     <div className="text-center text-gray-600 py-8">
                         Keine Beiträge gefunden.
@@ -199,7 +179,6 @@ function Content({ contentType }) {
                 {totalPages > 1 && (
                     <div className="flex justify-center items-center mt-12 gap-2">
                         <button
-                            aria-label="Show Content to the Left"
                             onClick={() => paginate(currentPage - 1)}
                             disabled={currentPage === 1}
                             className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:hover:bg-transparent transition-colors duration-300"
@@ -209,7 +188,6 @@ function Content({ contentType }) {
 
                         {getPageNumbers().map((pageNumber, index) => (
                             <button
-                                aria-label={`Show content on page ${pageNumber}`}
                                 key={index}
                                 onClick={() => pageNumber !== '...' && paginate(pageNumber)}
                                 disabled={pageNumber === '...'}
@@ -223,7 +201,6 @@ function Content({ contentType }) {
                         ))}
 
                         <button
-                            aria-label="Show Content to the Right"
                             onClick={() => paginate(currentPage + 1)}
                             disabled={currentPage === totalPages}
                             className="p-2 rounded-lg hover:bg-gray-100 disabled:opacity-50 disabled:hover:bg-transparent transition-colors duration-300"
