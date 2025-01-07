@@ -50,7 +50,7 @@ const CookieBanner = () => {
         <div className="fixed bottom-0 left-0 right-0 bg-black opacity-95 text-white p-4 shadow-lg z-50">
             <div className="container mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-sm">
-                    Wir verwenden Cookies, um Ihr Browsererlebnis zu verbessern und diese Website zu optimieren.
+                    Wir verwenden Cookies, um Ihr Browsing-Erlebnis zu verbessern und diese Website zu optimieren.
                 </div>
                 <div className="flex gap-4">
                     <button
