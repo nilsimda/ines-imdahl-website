@@ -27,13 +27,20 @@ function About() {
                     </h3>
                     <div className="text-gray-600 space-y-4 leading-relaxed">
                         <p>
-                            80 Prozent der Führungskräfte von Unternehmen glauben, die Bedürfnisse und Wünsche ihrer Kund:innen zu kennen – nur 8 Prozent der Kund:innen sehen das auch so. Gehören Sie nicht länger zu denjenigen, die Ihre Kund:innen nur glauben zu verstehen. Lernen Sie in meinem LinkedIn Learning-Audiokurs, wie Sie die Werkzeuge der Marktforschung nutzen, die richtigen Menschen für Ihr Unternehmen befragen und deren Antworten interpretieren, um Ihre Geschäftsstrategien auf die nächste Ebene zu heben.
+                            Mein Name ist Ines Imdahl, ich bin Diplom-Psychologin mit einem besonderen Schwerpunkt Tiefenpsychologie. Genau: der morphologischen Psychologie. Schon immer hat mich interessiert, warum die Menschen tun, was sie tun & warum sie sich mit vernünftigen Argumenten selten überzeugen lassen.
+                            Sie rauchen, obwohl sie voll aufgeklärt sind über die gesundheitsschädlichen folgen. Sie essen Billigfleisch, obwohl sie gegen Massentierhaltung sind.
                         </p>
                         <p>
-                            Ich rüste Sie mit dem Wissen und den Fertigkeiten aus, um hinter die Fassade blicken zu können und die wahren Beweggründe und Meinungen Ihrer Kund:innen zu erkennen. Nicht immer sind diese so vernünftig oder offenkundig, wie es auf den ersten Blick scheint. Sammeln Sie daher nicht länger nur Daten, sondern lernen Sie, tiefe Einblicke zu gewinnen.
+                            Meine Fragen nach dem „Warum“ habe ich zum Beruf gemacht: ich erforsche gemeinsam mit meinem Team aus dem rheingold salon den Alltag der Menschen, das Verhalten, das Erleben rund um Produkte, Marken, aber auch Trends. Das tue ich die meiste Zeit.
                         </p>
                         <p>
-                            Sie sind bereit, mit mir die geheime Logik des Marktes zu entschlüsseln? Die Geheimnisse hinter dem Verhalten Ihrer Kund:innen zu lüften und Ihre Unternehmensentscheidungen an Ihren Kund:innen auszurichten? Dann nehmen Sie sich ein wenig Zeit und begleiten Sie mich für eine gute Stunde. Wenn Sie einen kostenlosen Link zum Premium-Kurs möchten, kann ich ihnen direkt über LinkedIn direkt diesen zukommen lassen. Schicken sie mir dort eine Nachricht.
+                            Aber ich schreibe auch gern, das tue ich auf LinkedIn, hier im Blog, in meinen Büchern und in vielen, vielen Veröffentlichungen zu den unterschiedlichsten Themen. Immer mit der psychologischen Brille auf. In den letzten Jahren sind es oft Frauenthemen zur Gendergerechtigkeit, die mich antreiben & schreiben lassen. Ein Grund: ich sollte (lieber) ein Junge werden & habe wohl mein Leben lang dafür gekämpft, dass dem Weiblichen gleichviel Wert beigemessen wird.
+                        </p>
+                        <p>
+                            Manchmal werde ich auch gefragt, ob ich beraten mag, Menschen oder gar ganze Unternehmen. Oder TV-Sender möchten, dass ich aus der Forschung heraus erkläre, warum Menschen manche Dinge tun oder wie es ihnen zum Beispiel in Krisen geht.
+                        </p>
+                        <p>
+                            Meine 4 Kinder fordern mich dabei immer wieder heraus – und helfen mir neugierig und offen für alle Fragestellungen zu bleiben.
                         </p>
                     </div>
                 </div>
@@ -71,13 +78,15 @@ function About() {
                     </h3>
                     <div className="text-gray-600 space-y-4 leading-relaxed">
                         <p>
-                            80 Prozent der Führungskräfte von Unternehmen glauben, die Bedürfnisse und Wünsche ihrer Kund:innen zu kennen – nur 8 Prozent der Kund:innen sehen das auch so. Gehören Sie nicht länger zu denjenigen, die Ihre Kund:innen nur glauben zu verstehen. Lernen Sie in diesem LinkedIn Learning-Audiokurs, wie Sie die Werkzeuge der Marktforschung nutzen, die richtigen Menschen für Ihr Unternehmen befragen und deren Antworten interpretieren, um Ihre Geschäftsstrategien auf die nächste Ebene zu heben.
+                            80 Prozent der Führungskräfte von Unternehmen glauben, die Bedürfnisse und Wünsche ihrer Kund:innen zu kennen – nur 8 Prozent der Kund:innen sehen das auch so. Gehören Sie nicht länger zu denjenigen, die Ihre Kund:innen nur glauben zu verstehen. Lernen Sie in meinem LinkedIn Learning-Audiokurs, wie Sie die Werkzeuge der Marktforschung nutzen, die richtigen Menschen für Ihr Unternehmen befragen und deren Antworten interpretieren, um Ihre Geschäftsstrategien auf die nächste Ebene zu heben.
+                        </p>
+
+                        <p>
+                            Ich rüste Sie mit dem Wissen und den Fertigkeiten aus, um hinter die Fassade blicken zu können und die wahren Beweggründe und Meinungen Ihrer Kund:innen zu erkennen. Nicht immer sind diese so vernünftig oder offenkundig, wie es auf den ersten Blick scheint. Sammeln Sie daher nicht länger nur Daten, sondern lernen Sie, tiefe Einblicke zu gewinnen.
+
                         </p>
                         <p>
-                            Ines Imdahl rüstet Sie mit dem Wissen und den Fertigkeiten, um hinter die Fassade blicken zu können und die wahren Beweggründe und Meinungen Ihrer Kund:innen zu erkennen. Nicht immer sind diese so vernünftig oder offenkundig, wie es auf den ersten Blick scheint. Sammeln Sie daher nicht länger nur Daten, sondern lernen Sie, tiefe Einblicke zu gewinnen.
-                        </p>
-                        <p>
-                            Sie sind bereit, mit Ines Imdahl die geheime Logik des Marktes zu entschlüsseln? Die Geheimnisse hinter dem Verhalten Ihrer Kund:innen zu lüften und Ihre Unternehmensentscheidungen an Ihren Kund:innen auszurichten? Dann nehmen Sie sich ein wenig Zeit und begleiten Sie Ines in die faszinierende Welt der Marktforschung.
+                            Sie sind bereit, mit mir die geheime Logik des Marktes zu entschlüsseln? Die Geheimnisse hinter dem Verhalten Ihrer Kund:innen zu lüften und Ihre Unternehmensentscheidungen an Ihren Kund:innen auszurichten? Dann nehmen Sie sich ein wenig Zeit und begleiten Sie mich für eine gute Stunde. Wenn Sie einen kostenlosen Link zum Premium-Kurs möchten, kann ich ihnen direkt über LinkedIn direkt diesen zukommen lassen. Schicken sie mir dort eine Nachricht.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
                             <a
