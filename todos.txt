@@ -1,6 +1,6 @@
 TODOS:
 markdown
-seo
+better scrolling with anchor links
 
 Nice to have:
 - share content

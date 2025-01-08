@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../../utils/supaBaseClient';
 import Embed from '../ui/Embed';
+import DynamicNavigation from '../ui/DynamicNavigation';
 
 function ContentDetail() {
     const { id } = useParams();
@@ -35,26 +36,29 @@ function ContentDetail() {
     }
 
     return (
-        <article className="max-w-4xl mx-auto py-16 px-4">
-            <button
-                onClick={() => navigate(-1)}
-                className="mb-8 text-gray-600 hover:text-gray-900"
-            >
-                ← Zurück
-            </button>
+        <>
+            <DynamicNavigation isHomePage={false} />
+            <article className="max-w-4xl mx-auto py-16 px-4">
+                <button
+                    onClick={() => navigate(-1)}
+                    className="mb-8 text-gray-600 hover:text-gray-900"
+                >
+                    ← Zurück
+                </button>
 
-            <h1 className="text-4xl font-bold mb-8">{content.title}</h1>
+                <h1 className="text-4xl font-bold mb-8">{content.title}</h1>
 
-            <Embed content={content} />
+                <Embed content={content} />
 
-            <div className="prose max-w-none mt-8">
-                <p className="whitespace-pre-wrap text-gray-700">{content.text}</p>
-            </div>
+                <div className="prose max-w-none mt-8">
+                    <p className="whitespace-pre-wrap text-gray-700">{content.text}</p>
+                </div>
 
-            <div className="mt-8 text-gray-500">
-                {new Date(content.date).toLocaleDateString()}
-            </div>
-        </article>
+                <div className="mt-8 text-gray-500">
+                    {new Date(content.date).toLocaleDateString()}
+                </div>
+            </article>
+        </>
     );
 }
 

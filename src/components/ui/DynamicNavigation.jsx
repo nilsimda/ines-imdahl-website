@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { scrollToSection, scrollToTop } from '../../utils/scrollToSection';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import MobileMenu from './MobileMenu';
+import logoUrl from '../../assets/name.webp'
 
-const DynamicNavigation = ({ logoUrl }) => {
+const DynamicNavigation = ({ isHomePage = true }) => {
     const [showNav, setShowNav] = useState(false);
     const [isNavLoaded, setIsNavLoaded] = useState(false);
     const [isScrolledPastLanding, setIsScrolledPastLanding] = useState(false);
@@ -13,25 +14,38 @@ const DynamicNavigation = ({ logoUrl }) => {
         const timer = setTimeout(() => {
             setShowNav(true);
             setIsNavLoaded(true);
-        }, 1000);
+        }, isHomePage ? 1000 : 0);
 
         const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            setIsScrolledPastLanding(scrollPosition > windowHeight * 0.7);
+            if (isHomePage) {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                setIsScrolledPastLanding(scrollPosition > windowHeight * 0.7);
+            }
+            else {
+                setIsScrolledPastLanding(true);
+            }
         };
+
+        // Set initial scroll state
+        if (!isHomePage) {
+            setIsScrolledPastLanding(true);
+        }
 
         window.addEventListener('scroll', handleScroll);
         return () => {
             clearTimeout(timer);
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [isHomePage]);
 
     const handleLinkClick = (event, sectionId) => {
         event.preventDefault();
-        scrollToSection(sectionId);
-        setIsMobileMenuOpen(false);
+        if (location.pathname !== '/') {
+            window.location.href = `/#${sectionId}`;
+        } else {
+            scrollToSection(sectionId);
+        }
     };
 
     const navLinks = [
@@ -77,10 +91,17 @@ const DynamicNavigation = ({ logoUrl }) => {
                 {showNav && (
                     <>
                         {/* Logo section */}
-                        {isScrolledPastLanding && (
+                        {(isScrolledPastLanding || !isHomePage) && (
                             <a
-                                href="#"
-                                onClick={scrollToTop}
+                                href="/"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    if (location.pathname !== '/') {
+                                        window.location.href = '/';
+                                    } else {
+                                        scrollToTop();
+                                    }
+                                }}
                                 className="flex-shrink-0 mr-8 transform hover:scale-105 transition-transform duration-300 ease-in-out relative group"
                             >
                                 <img
@@ -109,21 +130,21 @@ const DynamicNavigation = ({ logoUrl }) => {
                         </ul>
 
                         {/* Mobile menu button - only show when scrolled */}
-                        {isScrolledPastLanding &&
+                        {(isScrolledPastLanding || !isHomePage) &&
                             <MobileMenuButton />
                         }
                     </>
                 )}
             </nav>
             {/* Only show mobile menu when scrolled past landing */}
-            {isScrolledPastLanding && <MobileMenu
+            {(isScrolledPastLanding || !isHomePage) && <MobileMenu
                 isMobileMenuOpen={isMobileMenuOpen}
                 setIsMobileMenuOpen={setIsMobileMenuOpen}
                 linkAnimationClasses={linkAnimationClasses}
                 handleLinkClick={handleLinkClick}
                 navLinks={navLinks}
             />}
-            {isMobileMenuOpen && isScrolledPastLanding && (
+            {isMobileMenuOpen && (isScrolledPastLanding || !isHomePage) && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
                     onClick={() => setIsMobileMenuOpen(false)}

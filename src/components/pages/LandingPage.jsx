@@ -1,6 +1,6 @@
 import BackgroundImage from '../ui/BackgroundImage';
 import Header from '../ui/Header';
-import Sidebar from '../ui/Sidebar';
+import DynamicNavigation from '../ui/DynamicNavigation';
 import Footer from '../ui/Footer';
 import imageUrl from '../../assets/pink.webp';
 import imageUrlSmall from '../../assets/pink_800.webp';
@@ -16,7 +16,7 @@ function LandingPage({ }) {
                 <Header logoImage={logoImage} logoImageSmall={logoImageSmall} />
 
                 <div className="flex-1">
-                    <Sidebar logoUrl={logoImage} />
+                    <DynamicNavigation />
                 </div>
             </div>
 
