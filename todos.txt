@@ -1,5 +1,4 @@
 TODOS:
-cookies
 markdown
 seo
 

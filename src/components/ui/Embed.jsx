@@ -1,3 +1,5 @@
+import { FaPlay } from 'react-icons/fa'
+
 export default function Embed({ content }) {
 
     function getEmbedUrl(url) {
@@ -23,15 +25,35 @@ export default function Embed({ content }) {
                     className="absolute inset-0 w-full h-full object-contain bg-gray-100"
                     loading="lazy"
                 />
-            ) : (
-                <iframe
-                    src={getEmbedUrl(content.videoUrl)}
-                    title={content.title}
-                    className="absolute inset-0 w-full h-full"
-                    allowFullScreen
-                    loading="lazy" //TODO: load this in the transition?
-                ></iframe>
-            )}
+            ) : content.imageUrl ? (
+                <a
+                    href={content.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <img
+                        src={content.imageUrl}
+                        alt={`Video thumbnail for ${content.title}`}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
+                        <FaPlay className="w-16 h-16 text-white opacity-80 hover:opacity-100 transition-opacity" />
+                    </div>
+                </a>
+            ) :
+                (
+                    <iframe
+                        src={getEmbedUrl(content.videoUrl)}
+                        title={content.title}
+                        className="absolute inset-0 w-full h-full"
+                        allowFullScreen
+                        loading="lazy"
+                    ></iframe>
+                )
+            }
         </div>
     );
 }
