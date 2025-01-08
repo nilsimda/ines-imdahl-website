@@ -14,7 +14,7 @@ function BackgroundImage({ imageUrl, imageUrlSmall }) {
             <div
                 className="fixed inset-0 z-[-2] bg-gradient-to-r from-pink-500/10 to-pink-300/10 mix-blend-overlay"
             />
-            <div className="absolute bottom-0 left-0 py-2 px-10 text-white text-sm z-10">
+            <div className="absolute bottom-0 left-0 py-2 px-10 text-gray-700 text-xs z-10">
                 Foto: Karin Tiller
             </div>
         </>
