@@ -18,6 +18,7 @@ function About() {
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
                         loading="lazy"
                     />
+                    <p className='text-xs text-gray-400'>Foto: Karin Tiller</p>
                 </div>
 
                 {/* Main text content with improved typography and spacing */}
@@ -53,6 +54,7 @@ function About() {
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
                         loading='lazy'
                     />
+                    <p className='text-xs text-gray-400'>Foto: Karin Tiller</p>
                 </div>
 
                 {/* Timeline section with enhanced styling */}

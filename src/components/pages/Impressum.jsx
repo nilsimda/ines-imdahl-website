@@ -1,6 +1,16 @@
+import { useNavigate } from 'react-router-dom';
+
 function Impressum() {
+    const navigate = useNavigate();
+
     return (
         <div className="px-4 py-4">
+            <button
+                onClick={() => navigate(-1)}
+                className="mb-4 px-4 py-2"
+            >
+                ← Zurück
+            </button>
             <h3 className="text-2xl font-bold">Impressum</h3>
             <p >Angaben gemäß § 5 DDG</p>
             <p>Ines Imdahl</p>

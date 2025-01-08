@@ -65,7 +65,7 @@ function Offerings() {
                         className="flex flex-col items-center p-6 rounded-lg shadow-lg hover:cursor-pointer hover:shadow-xl hover:scale-105 transition duration-300 bg-white h-full"
                         onClick={() => window.open(offering.link, '_blank')}
                     >
-                        <div className="w-full aspect-[4/3] relative mb-6 rounded-t-lg overflow-hidden">
+                        <div className="w-full aspect-[4/3] relative rounded-t-lg overflow-hidden">
                             <img
                                 src={offering.image}
                                 alt={`Bild von Ines Imdahl zum Thema ${offering.title}`}
@@ -73,6 +73,7 @@ function Offerings() {
                                 load="lazy"
                             />
                         </div>
+                        <p className="text-gray-500 text-xs mb-6 self-start">Foto: Karin Tiller</p>
                         <div className="mb-6 text-gray-700">
                             {offering.icon}
                         </div>
