@@ -65,7 +65,7 @@ function Offerings() {
                         className="flex flex-col items-center p-6 rounded-lg shadow-lg hover:cursor-pointer hover:shadow-xl hover:scale-105 transition duration-300 bg-white h-full"
                         onClick={() => window.open(offering.link, '_blank')}
                     >
-                        <div className="w-full aspect-[4/3] relative rounded-t-lg overflow-hidden">
+                        <div className="w-full aspect-[4/3] relative rounded-t-lg overflow-hidden mb-6">
                             <img
                                 src={offering.image}
                                 alt={`Bild von Ines Imdahl zum Thema ${offering.title}`}
