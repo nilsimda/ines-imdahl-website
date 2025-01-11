@@ -8,8 +8,11 @@ importers:
 
   .: {}
 
-  packages/ines-portfolio:
+  apps/ines-portfolio:
     dependencies:
+      '@monorepo/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
       '@supabase/auth-ui-react':
         specifier: ^0.4.7
         version: 0.4.7(@supabase/supabase-js@2.47.12)
@@ -95,6 +98,73 @@ importers:
       vite:
         specifier: ^6.0.5
         version: 6.0.7(@types/node@16.18.11)(jiti@1.21.7)(yaml@2.7.0)
+
+  apps/jens-portfolio:
+    dependencies:
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.17.0
+        version: 9.18.0
+      '@types/react':
+        specifier: ^18.3.18
+        version: 18.3.18
+      '@types/react-dom':
+        specifier: ^18.3.5
+        version: 18.3.5(@types/react@18.3.18)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.4
+        version: 4.3.4(vite@6.0.7(@types/node@22.10.5)(jiti@1.21.7)(yaml@2.7.0))
+      eslint:
+        specifier: ^9.17.0
+        version: 9.18.0(jiti@1.21.7)
+      eslint-plugin-react:
+        specifier: ^7.37.2
+        version: 7.37.3(eslint@9.18.0(jiti@1.21.7))
+      eslint-plugin-react-hooks:
+        specifier: ^5.0.0
+        version: 5.1.0(eslint@9.18.0(jiti@1.21.7))
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.16
+        version: 0.4.16(eslint@9.18.0(jiti@1.21.7))
+      globals:
+        specifier: ^15.14.0
+        version: 15.14.0
+      vite:
+        specifier: ^6.0.5
+        version: 6.0.7(@types/node@22.10.5)(jiti@1.21.7)(yaml@2.7.0)
+
+  packages/shared:
+    dependencies:
+      '@supabase/supabase-js':
+        specifier: ^2.47.10
+        version: 2.47.12
+      '@vercel/analytics':
+        specifier: ^1.4.1
+        version: 1.4.1(react@18.3.1)
+      '@vercel/speed-insights':
+        specifier: ^1.1.0
+        version: 1.1.0(react@18.3.1)
+      lucide-react:
+        specifier: ^0.469.0
+        version: 0.469.0(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      react-icons:
+        specifier: ^5.4.0
+        version: 5.4.0(react@18.3.1)
+      react-simple-typewriter:
+        specifier: ^5.0.1
+        version: 5.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
 packages:
 
@@ -3440,6 +3510,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@vitejs/plugin-react@4.3.4(vite@6.0.7(@types/node@22.10.5)(jiti@1.21.7)(yaml@2.7.0))':
+    dependencies:
+      '@babel/core': 7.26.0
+      '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.14.2
+      vite: 6.0.7(@types/node@22.10.5)(jiti@1.21.7)(yaml@2.7.0)
+    transitivePeerDependencies:
+      - supports-color
+
   abbrev@2.0.0: {}
 
   acorn-import-attributes@1.9.5(acorn@8.14.0):
@@ -5430,6 +5511,17 @@ snapshots:
       rollup: 4.30.1
     optionalDependencies:
       '@types/node': 16.18.11
+      fsevents: 2.3.3
+      jiti: 1.21.7
+      yaml: 2.7.0
+
+  vite@6.0.7(@types/node@22.10.5)(jiti@1.21.7)(yaml@2.7.0):
+    dependencies:
+      esbuild: 0.24.2
+      postcss: 8.4.49
+      rollup: 4.30.1
+    optionalDependencies:
+      '@types/node': 22.10.5
       fsevents: 2.3.3
       jiti: 1.21.7
       yaml: 2.7.0

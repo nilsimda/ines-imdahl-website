@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import DynamicNavigation from '../ui/DynamicNavigation';
+import { DynamicNavigation } from '@monorepo/shared/components';
 
 function Impressum() {
     const navigate = useNavigate();

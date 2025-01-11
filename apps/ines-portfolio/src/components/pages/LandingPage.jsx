@@ -1,7 +1,4 @@
-import BackgroundImage from '../ui/BackgroundImage';
-import Header from '../ui/Header';
-import DynamicNavigation from '../ui/DynamicNavigation';
-import Footer from '../ui/Footer';
+import { BackgroundImage, Header, DynamicNavigation, Footer } from '@monorepo/shared/components';
 import imageUrl from '../../assets/pink.webp';
 import imageUrlSmall from '../../assets/pink_800.webp';
 import logoImage from '../../assets/name.webp';
@@ -16,7 +13,7 @@ function LandingPage({ }) {
                 <Header logoImage={logoImage} logoImageSmall={logoImageSmall} />
 
                 <div className="flex-1">
-                    <DynamicNavigation />
+                    <DynamicNavigation logoUrl={logoImageSmall} />
                 </div>
             </div>
 

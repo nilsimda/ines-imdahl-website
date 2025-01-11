@@ -1,0 +1,20 @@
+{
+    "name": "@monorepo/shared",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@supabase/supabase-js": "^2.47.10",
+        "@vercel/analytics": "^1.4.1",
+        "@vercel/speed-insights": "^1.1.0",
+        "lucide-react": "^0.469.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-icons": "^5.4.0",
+        "react-simple-typewriter": "^5.0.1"
+    },
+    "exports": {
+        "./components": "./src/components/index.js",
+        "./pages": "./src/pages/index.js",
+        "./utils": "./src/utils/index.js"
+    }
+}

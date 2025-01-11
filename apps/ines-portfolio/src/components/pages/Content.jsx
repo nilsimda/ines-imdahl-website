@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../../utils/supaBaseClient';
+import { supabase } from '@monorepo/shared/utils';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import Embed from '../ui/Embed';
-
-//TODO: fix heights accross pages
+import { Embed } from '@monorepo/shared/components';
 
 function Content({ contentType }) {
     const [blogs, setBlogs] = useState([]);

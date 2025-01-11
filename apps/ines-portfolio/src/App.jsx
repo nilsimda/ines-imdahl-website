@@ -8,7 +8,7 @@ import Books from './components/pages/Books';
 import Offerings from './components/pages/Offerings';
 import ContentDetail from './components/pages/ContentDetail';
 import Impressum from './components/pages/Impressum';
-import CookieBanner from './components/ui/CookieBanner';
+import { CookieBanner } from '@monorepo/shared/components';
 
 function App() {
   return (

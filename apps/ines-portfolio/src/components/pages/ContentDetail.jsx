@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { supabase } from '../../utils/supaBaseClient';
-import Embed from '../ui/Embed';
-import DynamicNavigation from '../ui/DynamicNavigation';
+import { supabase } from '@monorepo/shared/utils';
+import { Embed, DynamicNavigation } from '@monorepo/shared/components';
 
 function ContentDetail() {
     const { id } = useParams();
