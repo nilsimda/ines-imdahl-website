@@ -1,15 +1,11 @@
 {
-    "name": "website-monorepo",
+    "name": "monorepo",
     "private": true,
-    "workspaces": [
-        "shared",
-        "ines-portfolio",
-        "jens-portfolio"
-    ],
+    "version": "1.0.0",
     "scripts": {
-        "dev:1": "npm run dev -w ines-portfolio",
-        "dev:2": "npm run dev -w jens-portfolio",
-        "build:1": "npm run build -w ines-portfolio",
-        "build:2": "npm run build -w jens-portfolio"
+        "dev:1": "pnpm --filter ines-portfolio dev",
+        "dev:2": "pnpm --filter jens-portfolio dev",
+        "build:1": "pnpm --filter ines-portfolio build",
+        "build:2": "pnpm --filter jens-portfolio build"
     }
 }
