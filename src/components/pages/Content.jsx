@@ -45,6 +45,7 @@ function Content({ contentType }) {
                 .from('content')
                 .select('*')
                 .eq('contentType', contentType)
+                .eq('user_id', 'a3a32e0a-4884-4224-98a0-26f9210aff3c')
                 .order('date', { ascending: false });
 
             if (error) throw error;
