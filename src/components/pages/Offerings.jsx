@@ -73,7 +73,6 @@ function Offerings() {
                                 load="lazy"
                             />
                         </div>
-                        <p className="text-gray-500 text-xs mb-6 self-start">Foto: Karin Tiller</p>
                         <div className="mb-6 text-gray-700">
                             {offering.icon}
                         </div>
