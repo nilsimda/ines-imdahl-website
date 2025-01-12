@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '@monorepo/shared/utils';
 import { Embed, DynamicNavigation } from '@monorepo/shared/components';
+import logoUrl from '../../assets/name_300.webp';
 
 function ContentDetail() {
     const { id } = useParams();
@@ -36,7 +37,7 @@ function ContentDetail() {
 
     return (
         <>
-            <DynamicNavigation isHomePage={false} />
+            <DynamicNavigation isHomePage={false} logoUrl={logoUrl} />
             <article className="max-w-4xl mx-auto py-16 px-4">
                 <button
                     onClick={() => navigate(-1)}

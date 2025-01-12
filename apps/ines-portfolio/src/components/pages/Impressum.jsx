@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import { DynamicNavigation } from '@monorepo/shared/components';
+import logoUrl from '../../assets/name_300.webp';
 
 function Impressum() {
     const navigate = useNavigate();
 
     return (
         <div>
-            <DynamicNavigation isHomePage={false} />
+            <DynamicNavigation isHomePage={false} logoUrl={logoUrl} />
             <div className="px-4 py-4">
                 <button
                     onClick={() => navigate("/")}
