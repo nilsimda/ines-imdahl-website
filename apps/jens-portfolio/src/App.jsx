@@ -5,8 +5,8 @@ import { Books, Contact, Content, ContentDetail, LandingPage, Impressum, Offerin
 import { CookieBanner } from '@monorepo/shared/components';
 import { FaLinkedin, FaMagnifyingGlass, FaMicrophone, FaUserGroup, FaTv } from 'react-icons/fa6'
 
-import backgroundImage from './assets/background.webp'
-import backgroundImageSmall from './assets/background_800.webp'
+import backgroundImage from './assets/background.jpg'
+import backgroundImageSmall from './assets/background.jpg'
 import logoImage from './assets/logo.png'
 import logoImageSmall from './assets/logo.png'
 import book1Cover from './assets/book1.webp'
