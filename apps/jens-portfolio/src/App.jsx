@@ -112,7 +112,7 @@ function App() {
           </>
         } />
         <Route path="/content/:id" element={<ContentDetail logoUrl={logoImageSmall} />} />
-        <Route path="/impressum" element={<Impressum name="Jens Lönneker" email="lönneker@rheingold-salon.de" logoUrl={logoImageSmall} />} />
+        <Route path="/impressum" element={<Impressum name="Jens Lönneker" email="loenneker@rheingold-salon.de" logoUrl={logoImageSmall} />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <CookieBanner />

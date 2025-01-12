@@ -1,8 +1,0 @@
-TODOS:
-markdown
-better scrolling with anchor links
-
-Nice to have:
-- share content
-- Better Search in Content (tags?)
-- lighthouse score
