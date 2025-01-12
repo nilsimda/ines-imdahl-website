@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaFacebook, FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 function Contact({ email, socialLinks }) {
     return (
         <section id="contact" className="flex flex-col items-center justify-center pb-8">
@@ -18,7 +18,7 @@ function Contact({ email, socialLinks }) {
                 <FaMapMarkerAlt className="mr-2" />Hohe Straße 160-168, 50667 Köln
             </a>
             <div className="flex space-x-6">
-                {socialLinks.map(({ label, href, icon, ariaLabel }) => (
+                {socialLinks.map(({ label, href, icon: Icon, ariaLabel }) => (
                     <a
                         key={label}
                         aria-label={ariaLabel}
@@ -27,7 +27,7 @@ function Contact({ email, socialLinks }) {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {icon}
+                        <Icon />
                     </a>
                 ))}
             </div>
