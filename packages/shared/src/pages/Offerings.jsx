@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Offerings({ offerings }) {
+function Offerings({ offerings, name }) {
 
     return (
         <section id="offerings">
@@ -17,7 +17,7 @@ function Offerings({ offerings }) {
                         <div className="w-full aspect-[4/3] relative rounded-t-lg overflow-hidden mb-6">
                             <img
                                 src={offering.image}
-                                alt={`Bild von Ines Imdahl zum Thema ${offering.title}`}
+                                alt={`Bild von ${name} zum Thema ${offering.title}`}
                                 className="absolute inset-0 w-full h-full object-cover"
                                 load="lazy"
                             />

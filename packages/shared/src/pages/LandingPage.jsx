@@ -1,6 +1,6 @@
 import { BackgroundImage, Header, DynamicNavigation, Footer } from '@monorepo/shared/components';
 
-function LandingPage({ backgroundImage, backgroundImageSmall, logoImage, logoImageSmall, gradientFrom, gradientTo, altName, fotoCredit, socialLinks }) {
+function LandingPage({ backgroundImage, backgroundImageSmall, logoImage, logoImageSmall, words, gradientFrom, gradientTo, altName, fotoCredit, socialLinks }) {
     return (
         <div className="relative min-h-screen flex">
             <BackgroundImage
@@ -13,7 +13,7 @@ function LandingPage({ backgroundImage, backgroundImageSmall, logoImage, logoIma
             />
 
             <div className="w-128 flex flex-col">
-                <Header logoImage={logoImage} logoImageSmall={logoImageSmall} />
+                <Header logoImage={logoImage} logoImageSmall={logoImageSmall} words={words} />
 
                 <div className="flex-1">
                     <DynamicNavigation logoUrl={logoImageSmall} />

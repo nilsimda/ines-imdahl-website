@@ -12,10 +12,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-@font-face {
-  font-family: 'International';
-  src: url('fonts/International.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
