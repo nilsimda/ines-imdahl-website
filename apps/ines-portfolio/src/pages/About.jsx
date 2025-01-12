@@ -7,7 +7,7 @@ import { FaArrowAltCircleRight, FaEnvelopeOpenText } from 'react-icons/fa';
 
 
 function About() {
-    timeline_content = [
+    const timeline_content = [
         "Studium der Psychologie an der Universität zu Köln",
         "Hochzeit mit meiner großen Liebe Jens Lönneker: 1999",
         "Geburten unserer vier fantastischen Kinder: 2000, 2004, 2007 & 2009",
