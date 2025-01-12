@@ -7,6 +7,18 @@ import { FaArrowAltCircleRight, FaEnvelopeOpenText } from 'react-icons/fa';
 
 
 function About() {
+    timeline_content = [
+        "Studium der Psychologie an der Universität zu Köln",
+        "Hochzeit mit meiner großen Liebe Jens Lönneker: 1999",
+        "Geburten unserer vier fantastischen Kinder: 2000, 2004, 2007 & 2009",
+        "Gründung des rheingold salon als psychologische Forschungsagentur",
+        "Handelsblattkolumnistin für den Werberat",
+        "Mein erstes Buch „Werbung auf der Couch“, 2016",
+        "Mein zweites Buch „Warum Frauen die Welt retten werden“, 2022",
+        "40 over 40 Germanys most inspiring women: 2022",
+        "LinkedIn TopVoice & wohl sowas wie LinkedIn Influenceri, 2024",
+        "LinkedIn Learning Trainerin zum Thema Marktforschung DACH, 2024",
+    ]
     return (
         <section id="about" className="py-16 px-4 max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-32 items-center">
@@ -62,7 +74,7 @@ function About() {
                     <h3 className="text-2xl font-semibold text-gray-800 border-b-2 border-gray-200 pb-2 inline-block">
                         Einige besondere Highlights in meinem Leben:
                     </h3>
-                    <Timeline />
+                    <Timeline content={timeline_content} />
                 </div>
 
                 {/* Course image */}

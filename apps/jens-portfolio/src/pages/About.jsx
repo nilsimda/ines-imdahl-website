@@ -1,10 +1,24 @@
 import React from 'react';
-import imageOne from '../assets/image1.jpg';
-import imageTwo from '../assets/image2.jpg';
+import imageOne from '../assets/image1.webp';
+import imageTwo from '../assets/image2.webp';
 import { Timeline } from '@monorepo/shared/components';
 
 
 function About() {
+    const timeline_content = [
+        "Teilnahme am Kölner Rosenmontagszug",
+        "Bankkaufmann",
+        "Psychologie-Studium",
+        "Großes Glück: Ines Imdahl sagt: „Ja“ – Heirat",
+        "Die Inspirationen und Challenges meiner Kinder",
+        "Gründung des rheingold salon als psychologische Forschungsagentur",
+        "Überleben der ersten und zweiten Steuerprüfung",
+        "ESOMAR Award",
+        "Präsidentschaft für die Gesellschaft zur Erforschung des Markenwesens e.V.",
+        "Buch \„Zukunfts-Bauer\“",
+        "Sonderpreis der Marktforschung"
+
+    ]
     return (
         <section id="about" className="py-16 px-4 max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 md:gap-y-32 items-center">
@@ -12,7 +26,7 @@ function About() {
                 <div className="w-full transform transition-transform duration-300 hover:scale-105 order-1">
                     <img
                         src={imageOne}
-                        alt="Bild von Ines Imdahl"
+                        alt="Bild von Jens Lönneker"
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
                         loading="lazy"
                     />
@@ -50,7 +64,7 @@ function About() {
                 <div className="w-full transform transition-transform duration-300 hover:scale-105 order-3 md:order-4">
                     <img
                         src={imageTwo}
-                        alt="Ines Imdahl lacht"
+                        alt="Fote von Jens Lönneker"
                         className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
                         loading='lazy'
                     />
@@ -62,7 +76,7 @@ function About() {
                     <h3 className="text-2xl font-semibold text-gray-800 border-b-2 border-gray-200 pb-2 inline-block">
                         Einige besondere Highlights in meinem Leben:
                     </h3>
-                    <Timeline />
+                    <Timeline content={timeline_content} />
                 </div>
 
             </div>

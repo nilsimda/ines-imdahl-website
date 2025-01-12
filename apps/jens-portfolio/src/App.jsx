@@ -5,10 +5,10 @@ import { Books, Contact, Content, ContentDetail, LandingPage, Impressum, Offerin
 import { CookieBanner } from '@monorepo/shared/components';
 import { FaLinkedin, FaMagnifyingGlass, FaMicrophone, FaUserGroup, FaTv } from 'react-icons/fa6'
 
-import backgroundImage from './assets/background.jpg'
-import backgroundImageSmall from './assets/background.jpg'
-import logoImage from './assets/logo.png'
-import logoImageSmall from './assets/logo.png'
+import backgroundImage from './assets/background.webp'
+import backgroundImageSmall from './assets/background_800.webp'
+import logoImage from './assets/logo.webp'
+import logoImageSmall from './assets/logo_300.webp'
 import book1Cover from './assets/book1.webp'
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
       image: null,
       icon: <FaMicrophone className="w-6 h-6" />,
       title: "Vorträge",
-      link: "mailto:imdahl@rheingold-salon.de?subject=Vorträge",
+      link: "mailto:loenneker@rheingold-salon.de?subject=Vorträge",
       description: (
         <>
           Unsere aktuellen Forschungsergebnisse bereite ich für diverse Key-Notes auf. Besonders häufig spreche ich über Mythen & Fakten rund um die Gen Z,  Gender- & Vereinbarkeitsthemen sowie Purpose & Sinn in Unternehmen. Gern bereite ich auch einen individuellen Vortrag für Ihr Unternehmen oder Ihre Veranstaltung vor.
@@ -40,7 +40,7 @@ function App() {
       image: null,
       icon: <FaUserGroup className="w-6 h-6" />,
       title: "Beratung & Coaching",
-      link: "mailto:imdahl@rheingold-salon.de?subject=Beratung%20%26%20Coaching",
+      link: "mailto:loenneker@rheingold-salon.de?subject=Beratung%20%26%20Coaching",
       description: (
         <>
           Marketing & Insight-Beratung gehört schon lange zu meinen Kompetenzen. Seit einigen wenigen Jahren & auf vielfache Anfragen hin,  biete ich auch persönliche Beratung für Führungsfrauen an, die sich weiter entwickeln wollen an. Grundlage hierfür ist meine Ausbildung zur analytischen Intensivberaterin. Hier habe ich nur sehr begrenzte Kapazitäten.
@@ -51,7 +51,7 @@ function App() {
       image: null,
       icon: <FaTv className="w-6 h-6" />,
       title: "TV & Medien Expertin",
-      link: "mailto:imdahl@rheingold-salon.de?subject=TV%20%26%20Medien%20Expertin",
+      link: "mailto:loenneker@rheingold-salon.de?subject=TV%20%26%20Medien%20Expertin",
       description: (
         <>
           Als TV-Psychologin & Expertin für Verbraucherverhalten werde ich oft gebucht, um Trends, Hypes oder bestimmte Themen aus forscherischer bzw. psychologischer Sicht zu bewerten und einzuschätzen. 6 Jahre wurde das im WDR sogar als eigenes Sendeformat ausgestrahlt. Wenn Sie Fragen oder Interesse an diesen Themen haben, jederzeit.
@@ -108,7 +108,7 @@ function App() {
             <div className="mt-40"></div>
             <Content contentType="publication" />
             <div className="mt-40"></div>
-            <Contact email="lönneker@rheingold-salon.de" socialLinks={socialLinks} />
+            <Contact email="loenneker@rheingold-salon.de" socialLinks={socialLinks} />
           </>
         } />
         <Route path="/content/:id" element={<ContentDetail logoUrl={logoImageSmall} />} />
