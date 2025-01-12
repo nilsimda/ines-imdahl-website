@@ -27,7 +27,7 @@ function Header({ logoImage, logoImageSmall, words }) {
                         <img
                             src={logoImage}
                             srcSet={`${logoImageSmall} 300w, ${logoImage} 500w`}
-                            className={`w-full h-full object-fill transition-all duration-1000 ease-in-out ${isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                            className={`w-full h-full object-contain transition-all duration-1000 ease-in-out ${isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
                                 }`}
                             alt="Logo von Ines Imdahl"
                             loading='eager'
