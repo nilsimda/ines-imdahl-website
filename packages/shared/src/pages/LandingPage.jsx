@@ -1,4 +1,4 @@
-import { BackgroundImage, Header, DynamicNavigation, Footer } from '@monorepo/shared/components';
+import { BackgroundImage, Header, DynamicNavigation, Footer, TearEffect } from '@monorepo/shared/components';
 
 function LandingPage({ backgroundImage, backgroundImageSmall, logoImage, logoImageSmall, words, gradientFrom, gradientTo, altName, fotoCredit, socialLinks }) {
     return (

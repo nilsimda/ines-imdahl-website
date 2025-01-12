@@ -26,20 +26,22 @@ function About() {
                     </h3>
                     <div className="text-gray-600 space-y-4 leading-relaxed">
                         <p>
-                            Mein Name ist Ines Imdahl, ich bin Diplom-Psychologin mit einem besonderen Schwerpunkt Tiefenpsychologie. Genau: der morphologischen Psychologie. Schon immer hat mich interessiert, warum die Menschen tun, was sie tun & warum sie sich mit vernünftigen Argumenten selten überzeugen lassen.
-                            Sie rauchen, obwohl sie voll aufgeklärt sind über die gesundheitsschädlichen folgen. Sie essen Billigfleisch, obwohl sie gegen Massentierhaltung sind.
+                            Guten Tag lieber Besucher, mein Name ist Jens Lönneker. Ich bin Tiefenpsychologe und mit Leib und Seele ein Forscher.
                         </p>
                         <p>
-                            Meine Fragen nach dem „Warum“ habe ich zum Beruf gemacht: ich erforsche gemeinsam mit meinem Team aus dem rheingold salon den Alltag der Menschen, das Verhalten, das Erleben rund um Produkte, Marken, aber auch Trends. Das tue ich die meiste Zeit.
+                            Mein Forschungsschwerpunkt ist die Wechselwirkung zwischen konkreten Alltagsgeschehnissen und den übergreifenden kulturellen Entwicklungen in der Gesellschaft. Wie entwickelt sich vor diesem Hintergrund das Bild und die Wahrnehmung von Medien, Produkten, Werbung oder aber auch von Teilen der Gesellschaft wie der Landwirtschaft?
                         </p>
                         <p>
-                            Aber ich schreibe auch gern, das tue ich auf LinkedIn, hier im Blog, in meinen Büchern und in vielen, vielen Veröffentlichungen zu den unterschiedlichsten Themen. Immer mit der psychologischen Brille auf. In den letzten Jahren sind es oft Frauenthemen zur Gendergerechtigkeit, die mich antreiben & schreiben lassen. Ein Grund: ich sollte (lieber) ein Junge werden & habe wohl mein Leben lang dafür gekämpft, dass dem Weiblichen gleichviel Wert beigemessen wird.
+                            Eigentlich wollte ich einmal ein Wirtschaftsstudium starten. Meine ersten Berufs-Erfahrungen bei verschiedenen Banken haben mich dann aber in die Arme der Psychologie getrieben. Die Art und Weise, wie Geld angelegt wurde oder auch wie die Kollegen miteinander umgingen, hatte aus meiner Sicht mehr mit Psychologie als mit rationalen wirtschaftlichen Erwägungen zu tun.
                         </p>
                         <p>
-                            Manchmal werde ich auch gefragt, ob ich beraten mag, Menschen oder gar ganze Unternehmen. Oder TV-Sender möchten, dass ich aus der Forschung heraus erkläre, warum Menschen manche Dinge tun oder wie es ihnen zum Beispiel in Krisen geht.
+                            Mein großartiger psychologischer Lehrmeister Wilhelm Salber hat es mir dann mit seinem Team ermöglicht, diese beruflichen Erfahrungen konzeptionell in dem bis heute einzigartigen Konzept der Morphologischen Psychologie aufzugreifen und weiterzuentwickeln.
                         </p>
                         <p>
-                            Meine 4 Kinder fordern mich dabei immer wieder heraus – und helfen mir neugierig und offen für alle Fragestellungen zu bleiben.
+                            Mit der Gründung einer eigenen Forschungsagentur – heute ist es der rheingold salon - wurde ein Traum war. Die Aufträge ermöglichten in einem nicht für möglich gehaltenen Maße, alltagspsychologischen Studien zu betreiben. Gerne schreibe und veröffentliche ich darüber oder halte Vorträge.
+                        </p>
+                        <p>
+                            Ines Imdahl ist privat wie beruflich die fantastische Frau, durch die mein Leben noch mehr Liebe, Tiefe und Spirit bekommt. Meine Kinder sind dabei ein permanenter Quell von Inspirationen und Herausforderungen.
                         </p>
                     </div>
                 </div>
