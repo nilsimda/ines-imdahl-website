@@ -14,14 +14,16 @@ function Offerings({ offerings, name }) {
                         className="flex flex-col items-center p-6 rounded-lg shadow-lg hover:cursor-pointer hover:shadow-xl hover:scale-105 transition duration-300 bg-white h-full"
                         onClick={() => window.open(offering.link, '_blank')}
                     >
-                        <div className="w-full aspect-[4/3] relative rounded-t-lg overflow-hidden mb-6">
-                            <img
-                                src={offering.image}
-                                alt={`Bild von ${name} zum Thema ${offering.title}`}
-                                className="absolute inset-0 w-full h-full object-cover"
-                                load="lazy"
-                            />
-                        </div>
+                        {offerings.image &&
+                            <div className="w-full aspect-[4/3] relative rounded-t-lg overflow-hidden mb-6">
+                                <img
+                                    src={offering.image}
+                                    alt={`Bild von ${name} zum Thema ${offering.title}`}
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    load="lazy"
+                                />
+                            </div>
+                        }
                         <div className="mb-6 text-gray-700">
                             {offering.icon}
                         </div>

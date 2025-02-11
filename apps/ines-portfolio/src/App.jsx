@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { FaMagnifyingGlass, FaMicrophone, FaUserGroup, FaTv, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa6";
 
@@ -36,7 +35,7 @@ function App() {
             image: vortrImage,
             icon: <FaMicrophone className="w-6 h-6" />,
             title: "Vorträge",
-            link: "mailto:loenneker@rheingold-salon.de?subject=Vorträge",
+            link: "mailto:imdahl@rheingold-salon.de?subject=Vorträge",
             description: (
                 <>
                     Unsere aktuellen Forschungsergebnisse bereite ich für diverse Key-Notes auf. Besonders häufig spreche ich über Mythen & Fakten rund um die Gen Z,  Gender- & Vereinbarkeitsthemen sowie Purpose & Sinn in Unternehmen. Gern bereite ich auch einen individuellen Vortrag für Ihr Unternehmen oder Ihre Veranstaltung vor.
@@ -47,7 +46,7 @@ function App() {
             image: beratungImage,
             icon: <FaUserGroup className="w-6 h-6" />,
             title: "Beratung & Coaching",
-            link: "mailto:loenneker@rheingold-salon.de?subject=Beratung%20%26%20Coaching",
+            link: "mailto:imdahl@rheingold-salon.de?subject=Beratung%20%26%20Coaching",
             description: (
                 <>
                     Marketing & Insight-Beratung gehört schon lange zu meinen Kompetenzen. Seit einigen wenigen Jahren & auf vielfache Anfragen hin,  biete ich auch persönliche Beratung für Führungsfrauen an, die sich weiter entwickeln wollen an. Grundlage hierfür ist meine Ausbildung zur analytischen Intensivberaterin. Hier habe ich nur sehr begrenzte Kapazitäten.
@@ -58,7 +57,7 @@ function App() {
             image: tvImage,
             icon: <FaTv className="w-6 h-6" />,
             title: "TV & Medien Experte",
-            link: "mailto:loenneker@rheingold-salon.de?subject=TV%20%26%20Medien%20Expertin",
+            link: "mailto:imdahl@rheingold-salon.de?subject=TV%20%26%20Medien%20Expertin",
             description: (
                 <>
                     Als TV-Psychologe & Experte für Verbraucherverhalten werde ich oft gebucht, um Trends, Hypes oder bestimmte Themen aus forscherischer bzw. psychologischer Sicht zu bewerten und einzuschätzen. 6 Jahre wurde das im WDR sogar als eigenes Sendeformat ausgestrahlt. Wenn Sie Fragen oder Interesse an diesen Themen haben, jederzeit.
