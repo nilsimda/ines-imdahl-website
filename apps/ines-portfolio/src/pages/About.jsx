@@ -1,4 +1,3 @@
-import React from 'react';
 import imageOne from '../assets/image1.webp';
 import imageTwo from '../assets/image2.webp';
 import courseImage from '../assets/courseImage.webp'

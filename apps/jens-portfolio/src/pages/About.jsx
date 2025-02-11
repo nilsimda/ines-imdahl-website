@@ -1,7 +1,8 @@
-import React from 'react';
 import imageOne from '../assets/image1.webp';
 import imageTwo from '../assets/image2.webp';
+import gemLogo from '../assets/gem-logo.svg';
 import { Timeline } from '@monorepo/shared/components';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 
 function About() {
@@ -15,7 +16,7 @@ function About() {
         "Überleben der ersten und zweiten Steuerprüfung",
         "ESOMAR Award",
         "Präsidentschaft für die Gesellschaft zur Erforschung des Markenwesens e.V.",
-        "Buch \„Zukunfts-Bauer\“",
+        "Buch „Zukunfts-Bauer“",
         "Sonderpreis der Marktforschung"
 
     ]
@@ -77,6 +78,34 @@ function About() {
                         Einige besondere Highlights in meinem Leben:
                     </h3>
                     <Timeline content={timeline_content} />
+                </div>
+
+                <div className="w-full transform transition-transform duration-300 hover:scale-105 order-5">
+                    <img
+                        src={gemLogo}
+                        alt="LinkedIn Kurs Vorschaubild"
+                        className="w-full h-auto rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                        loading="lazy"
+                    />
+                </div>
+                <div className="space-y-6 pl-4 md:col-span-2 md:pr-16 order-6">
+                    <h3 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2 inline-block">
+                        Gesellschaft zur Erfoschung des Markenwesens
+                    </h3>
+                    <div className="text-gray-600 space-y-4 leading-relaxed">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                            <a
+                                href="https://www.gem-online.de/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex gap-2 items-center justify-center px-6 py-3 bg-black text-white font-medium rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
+                            >
+                                <FaArrowAltCircleRight />
+                                Zur G.E.M
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
