@@ -9,11 +9,15 @@ import backgroundImageSmall from './assets/background_800.webp'
 import logoImage from './assets/logo.webp'
 import logoImageSmall from './assets/logo_300.webp'
 import book1Cover from './assets/book1.webp'
+import authorImage from './assets/author.avif'
+import beratungImage from './assets/beratung.avif'
+import vortragImage from './assets/vortrag.avif'
+import forschungImage from './assets/forschung.avif'
 
 function App() {
     const offerings = [
         {
-            image: null,
+            image: forschungImage,
             icon: <FaMagnifyingGlass className="w-6 h-6" />,
             title: "Forschung",
             link: "https://www.rheingold-salon.de/",
@@ -24,7 +28,7 @@ function App() {
             ),
         },
         {
-            image: null,
+            image: vortragImage,
             icon: <FaMicrophone className="w-6 h-6" />,
             title: "Vorträge",
             link: "mailto:loenneker@rheingold-salon.de?subject=Vorträge",
@@ -35,7 +39,7 @@ function App() {
             ),
         },
         {
-            image: null,
+            image: beratungImage,
             icon: <FaUserGroup className="w-6 h-6" />,
             title: "Beratung & Coaching",
             link: "mailto:loenneker@rheingold-salon.de?subject=Beratung%20%26%20Coaching",
@@ -46,11 +50,11 @@ function App() {
             ),
         },
         {
-            image: null,
+            image: authorImage,
             icon: <FaBookOpen className="w-6 h-6" />,
             title: "Autor & Publikationen",
             link: "mailto:loenneker@rheingold-salon.de?subject=TV%20%26%20Medien%20Expertin",
-
+            hasLongContent: true,
             description: (
                 <>
                     Die Erkenntnisse aus der Forschung bilden die Basis für meine Veröffentlichungen in Monographien, Handbüchern und eigenen Büchern.
