@@ -2,14 +2,13 @@ import About from './pages/About.jsx';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Books, Contact, Content, ContentDetail, LandingPage, Impressum, Offerings } from '@monorepo/shared/pages';
 import { CookieBanner } from '@monorepo/shared/components';
-import { FaLinkedin, FaMagnifyingGlass, FaMicrophone, FaUserGroup, FaBookOpen } from 'react-icons/fa6'
+import { FaLinkedin, FaMagnifyingGlass, FaMicrophone, FaUserGroup } from 'react-icons/fa6'
 
 import backgroundImage from './assets/background.webp'
 import backgroundImageSmall from './assets/background_800.webp'
 import logoImage from './assets/logo.webp'
 import logoImageSmall from './assets/logo_300.webp'
 import book1Cover from './assets/book1.webp'
-import authorImage from './assets/author.avif'
 import beratungImage from './assets/beratung.avif'
 import vortragImage from './assets/vortrag.avif'
 import forschungImage from './assets/forschung.avif'
@@ -49,7 +48,7 @@ function App() {
                 </>
             ),
         },
-        {
+        /*{
             image: authorImage,
             icon: <FaBookOpen className="w-6 h-6" />,
             title: "Autor & Publikationen",
@@ -75,7 +74,7 @@ function App() {
                     </ul>
                 </>
             ),
-        }
+        }*/
     ];
 
     const books = [
