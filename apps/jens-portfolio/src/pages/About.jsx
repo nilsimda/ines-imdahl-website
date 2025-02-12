@@ -93,7 +93,7 @@ function About() {
                         Gesellschaft zur Erfoschung des Markenwesens
                     </h3>
                     <div className="text-gray-600 space-y-4 leading-relaxed">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Seit 2019 bin ich ehrenamtlicher Präsident der Gesellschaft zur Erforschung des Markenwesens (G·E·M) e.V. Die G·E·M ist eine exklusive Gemeinschaft engagierter Markenverantwortlicher, Markenforscher, Markenberater und Markengestalter. Sie ist die Plattform für Markenforschung und Transfer im Netzwerk des Markenverbands. Die G·E·M unterstützt ihre Mitglieder durch grundlegende und zukunftsweisende Forschungserkenntnisse und inspiriert durch erfolgreiche Praxisbeispiele.</p>
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
                             <a
                                 href="https://www.gem-online.de/"
