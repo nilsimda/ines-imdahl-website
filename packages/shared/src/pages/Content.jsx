@@ -75,7 +75,11 @@ function Content({ contentType }) {
     };
 
     const handleCardClick = (blog) => {
-        navigate(`/content/${blog.id}`);
+        if (blog.external_link) {
+            window.open(blog.external_link, "_blank");
+        } else {
+            navigate(`/content/${blog.id}`);
+        }
     };
 
     const getPageNumbers = () => {
